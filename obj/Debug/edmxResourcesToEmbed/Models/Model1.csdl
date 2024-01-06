@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBQuanLyKhachSanModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DichVu">
+    <Key>
+      <PropertyRef Name="IdDichVu" />
+    </Key>
+    <Property Name="IdDichVu" Type="Int32" Nullable="false" />
+    <Property Name="TenDichVu" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="LoaiDichVu" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="DonViTinh" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="DonGia" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HoaDon">
+    <Key>
+      <PropertyRef Name="IdHoaDon" />
+    </Key>
+    <Property Name="IdHoaDon" Type="String" MaxLength="12" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="idNhanVien" Type="String" MaxLength="8" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="idKhachHang" Type="String" MaxLength="12" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="idPhong" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="NgayTao" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="NgayThanhToan" Type="DateTime" Precision="0" />
+    <Property Name="TrangThai" Type="Boolean" Nullable="false" />
+    <Property Name="TongHoaDon" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HoaDonDichVu">
+    <Key>
+      <PropertyRef Name="IdHoaDon" />
+      <PropertyRef Name="idDichVu" />
+    </Key>
+    <Property Name="IdHoaDon" Type="String" MaxLength="12" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="idDichVu" Type="Int32" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" Nullable="false" />
+    <Property Name="ThanhTien" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KhachHang">
+    <Key>
+      <PropertyRef Name="CCCD" />
+    </Key>
+    <Property Name="CCCD" Type="String" MaxLength="12" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="TenKhachHang" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Diachi" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="SoDienThoai" Type="String" MaxLength="12" FixedLength="true" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LoaiPhong">
+    <Key>
+      <PropertyRef Name="IdLoaiPhong" />
+    </Key>
+    <Property Name="IdLoaiPhong" Type="Int32" Nullable="false" />
+    <Property Name="TenLoaiPhong" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="SoNguoi" Type="Int32" Nullable="false" />
+    <Property Name="GiaGioDau" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="GiaGioTiepTheo" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="GiaQuaDem" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="GiaTheoNgay" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NhanVien">
+    <Key>
+      <PropertyRef Name="IdNhanVien" />
+    </Key>
+    <Property Name="IdNhanVien" Type="String" MaxLength="8" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="TenNhanVien" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="GioiTinh" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="DiaChi" Type="String" MaxLength="70" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="SoDienThoai" Type="String" MaxLength="12" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="CCCD" Type="String" MaxLength="12" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="BoPhan" Type="String" MaxLength="25" FixedLength="true" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Phong">
+    <Key>
+      <PropertyRef Name="IdPhong" />
+    </Key>
+    <Property Name="IdPhong" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="idLoaiPhong" Type="Int32" Nullable="false" />
+    <Property Name="TinhTrangPhong" Type="Int32" Nullable="false" />
+    <Property Name="IsVip" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DBQuanLyKhachSanEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DichVus" EntityType="Self.DichVu" />
+    <EntitySet Name="HoaDons" EntityType="Self.HoaDon" />
+    <EntitySet Name="HoaDonDichVus" EntityType="Self.HoaDonDichVu" />
+    <EntitySet Name="KhachHangs" EntityType="Self.KhachHang" />
+    <EntitySet Name="LoaiPhongs" EntityType="Self.LoaiPhong" />
+    <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
+    <EntitySet Name="Phongs" EntityType="Self.Phong" />
+  </EntityContainer>
+</Schema>
