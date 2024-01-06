@@ -1,7 +1,22 @@
-﻿INSERT INTO LoaiPhong (idLoaiPhong, TenLoaiPhong, SoNguoi, GiaGioDau, GiaGioTiepTheo, GiaQuaDem, GiaTheoNgay)
+﻿INSERT INTO NhanVien (IdNhanVien, TenNhanVien, NgaySinh, GioiTinh, DiaChi, SoDienThoai, CCCD, BoPhan)
 VALUES
-(1,'Phòng Đơn 1', 1, 50000, 30000, 150000, 300000),
-(2, 'Phòng Đơn 2', 1, 60000, 35000, 180000, 350000),
-(3, 'Phòng Đôi 1', 2, 80000, 45000, 200000, 400000),
-(4, 'Phòng Đôi 2', 2, 90000, 50000, 220000, 450000),
-(5, 'Phòng Gia Đình', 4, 120000, 70000, 250000, 500000);
+(N'1', N'Nguyễn Văn A', '1990-01-01', N'Nam', N'123 Đường ABC', N'0123456789', N'123456789012', N'Bếp'),
+(N'2', N'Nguyễn Thị A', '1992-02-02', N'Nữ', N'456 Đường XYZ', N'0987654321', N'987654321012', N'Lễ tân'),
+(N'3', N'Nguyễn Văn B', '1985-03-03', N'Nam', N'789 Đường LMN', N'0123456789', N'123456789012', N'Thu ngân'),
+(N'4', N'Nguyễn Thị B', '1991-04-04', N'Nữ', N'321 Đường PQR', N'0987654321', N'987654321012', N'Nhân viên dịch vụ'),
+(N'5', N'Nguyễn Văn C', '1995-05-05', N'Nam', N'678 Đường UVW', N'0123456789', N'123456789012', N'Bếp'),
+(N'6', N'Nguyễn Thị C', '1988-06-06', N'Nữ', N'234 Đường DEF', N'0987654321', N'987654321012', N'Lễ tân'),
+(N'7', N'Nguyễn Văn D', '1993-07-07', N'Nam', N'567 Đường GHI', N'0123456789', N'123456789012', N'Thu ngân'),
+(N'8', N'Nguyễn Thị D', '1986-08-08', N'Nữ', N'876 Đường JKL', N'0987654321', N'987654321012', N'Nhân viên dịch vụ'),
+(N'9', N'Nguyễn Văn E', '1994-09-09', N'Nam', N'789 Đường MNO', N'0123456789', N'123456789012', N'Bếp'),
+(N'10', N'Nguyễn Thị E', '1987-10-10', N'Nữ', N'543 Đường PQR', N'0987654321', N'987654321012', N'Lễ tân'),
+(N'11', N'Nguyễn Văn F', '1996-11-11', N'Nam', N'876 Đường STU', N'0123456789', N'123456789012', N'Thu ngân'),
+(N'12', N'Nguyễn Thị F', '1989-12-12', N'Nữ', N'345 Đường VWX', N'0987654321', N'987654321012', N'Nhân viên dịch vụ'),
+(N'13', N'Nguyễn Văn G', '1997-01-13', N'Nam', N'234 Đường YZA', N'0123456789', N'123456789012', N'Bếp'),
+(N'14', N'Nguyễn Thị G', '1998-02-14', N'Nữ', N'654 Đường BCD', N'0987654321', N'987654321012', N'Lễ tân'),
+(N'15', N'Nguyễn Văn H', '1999-03-15', N'Nam', N'876 Đường EFG', N'0123456789', N'123456789012', N'Thu ngân'),
+(N'16', N'Nguyễn Thị H', '2000-04-16', N'Nữ', N'987 Đường HIJ', N'0987654321', N'987654321012', N'Nhân viên dịch vụ'),
+(N'17', N'Nguyễn Văn I', '2001-05-17', N'Nam', N'876 Đường KLM', N'0123456789', N'123456789012', N'Bếp'),
+(N'18', N'Nguyễn Thị I', '2002-06-18', N'Nữ', N'654 Đường NOP', N'0987654321', N'987654321012', N'Lễ tân'),
+(N'19', N'Nguyễn Văn K', '2003-07-19', N'Nam', N'432 Đường QRS', N'0123456789', N'123456789012', N'Thu ngân'),
+(N'20', N'Nguyễn Thị K', '2004-08-20', N'Nữ', N'987 Đường TUV', N'0987654321', N'987654321012', N'Nhân viên dịch vụ');
