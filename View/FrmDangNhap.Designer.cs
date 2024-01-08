@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.BtnThoat = new RJCodeAdvance.RJControls.RJButton();
-            this.BtnDangNhap = new RJCodeAdvance.RJControls.RJButton();
-            this.label2 = new System.Windows.Forms.Label();
+            this.TxtMatKhau = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.BtnDangNhap = new RJCodeAdvance.RJControls.RJButton();
+            this.BtnThoat = new RJCodeAdvance.RJControls.RJButton();
             this.label3 = new System.Windows.Forms.Label();
             this.TxtMaNhanVien = new System.Windows.Forms.TextBox();
-            this.TxtMatKhau = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,28 +73,42 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(500, 300);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // BtnThoat
+            // TxtMatKhau
             // 
-            this.BtnThoat.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BtnThoat.AutoSize = true;
-            this.BtnThoat.BackColor = System.Drawing.Color.Tomato;
-            this.BtnThoat.BackgroundColor = System.Drawing.Color.Tomato;
-            this.BtnThoat.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.BtnThoat.BorderRadius = 15;
-            this.BtnThoat.BorderSize = 0;
-            this.tableLayoutPanel1.SetColumnSpan(this.BtnThoat, 4);
-            this.BtnThoat.FlatAppearance.BorderSize = 0;
-            this.BtnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnThoat.ForeColor = System.Drawing.Color.White;
-            this.BtnThoat.Location = new System.Drawing.Point(305, 225);
-            this.BtnThoat.Name = "BtnThoat";
-            this.tableLayoutPanel1.SetRowSpan(this.BtnThoat, 2);
-            this.BtnThoat.Size = new System.Drawing.Size(90, 50);
-            this.BtnThoat.TabIndex = 13;
-            this.BtnThoat.Text = "Thoát";
-            this.BtnThoat.TextColor = System.Drawing.Color.White;
-            this.BtnThoat.UseVisualStyleBackColor = false;
-            this.BtnThoat.Click += new System.EventHandler(this.BtnThoat_Click_1);
+            this.TxtMatKhau.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanel1.SetColumnSpan(this.TxtMatKhau, 5);
+            this.TxtMatKhau.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtMatKhau.Location = new System.Drawing.Point(215, 157);
+            this.TxtMatKhau.Multiline = true;
+            this.TxtMatKhau.Name = "TxtMatKhau";
+            this.TxtMatKhau.PasswordChar = '*';
+            this.TxtMatKhau.Size = new System.Drawing.Size(220, 35);
+            this.TxtMatKhau.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label1.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.label1, 3);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(50, 110);
+            this.label1.Margin = new System.Windows.Forms.Padding(0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(123, 30);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Mã quản lý";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label2.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.label2, 3);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(53, 160);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 30);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Mật khẩu";
             // 
             // BtnDangNhap
             // 
@@ -119,30 +133,28 @@
             this.BtnDangNhap.UseVisualStyleBackColor = false;
             this.BtnDangNhap.Click += new System.EventHandler(this.BtnDangNhap_Click_1);
             // 
-            // label2
+            // BtnThoat
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.label2, 3);
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(53, 160);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 30);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Mật khẩu";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.label1, 3);
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(50, 110);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 30);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Mã nhân viên";
+            this.BtnThoat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnThoat.AutoSize = true;
+            this.BtnThoat.BackColor = System.Drawing.Color.Tomato;
+            this.BtnThoat.BackgroundColor = System.Drawing.Color.Tomato;
+            this.BtnThoat.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.BtnThoat.BorderRadius = 15;
+            this.BtnThoat.BorderSize = 0;
+            this.tableLayoutPanel1.SetColumnSpan(this.BtnThoat, 4);
+            this.BtnThoat.FlatAppearance.BorderSize = 0;
+            this.BtnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnThoat.ForeColor = System.Drawing.Color.White;
+            this.BtnThoat.Location = new System.Drawing.Point(305, 225);
+            this.BtnThoat.Name = "BtnThoat";
+            this.tableLayoutPanel1.SetRowSpan(this.BtnThoat, 2);
+            this.BtnThoat.Size = new System.Drawing.Size(90, 50);
+            this.BtnThoat.TabIndex = 13;
+            this.BtnThoat.Text = "Thoát";
+            this.BtnThoat.TextColor = System.Drawing.Color.White;
+            this.BtnThoat.UseVisualStyleBackColor = false;
+            this.BtnThoat.Click += new System.EventHandler(this.BtnThoat_Click_1);
             // 
             // label3
             // 
@@ -168,18 +180,6 @@
             this.TxtMaNhanVien.Name = "TxtMaNhanVien";
             this.TxtMaNhanVien.Size = new System.Drawing.Size(220, 35);
             this.TxtMaNhanVien.TabIndex = 15;
-            // 
-            // TxtMatKhau
-            // 
-            this.TxtMatKhau.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tableLayoutPanel1.SetColumnSpan(this.TxtMatKhau, 5);
-            this.TxtMatKhau.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtMatKhau.Location = new System.Drawing.Point(215, 157);
-            this.TxtMatKhau.Multiline = true;
-            this.TxtMatKhau.Name = "TxtMatKhau";
-            this.TxtMatKhau.PasswordChar = '*';
-            this.TxtMatKhau.Size = new System.Drawing.Size(220, 35);
-            this.TxtMatKhau.TabIndex = 16;
             // 
             // FrmDangNhap
             // 

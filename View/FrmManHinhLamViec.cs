@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace TestGUI1.View
 {
-    public partial class FrmMainScreen : Form
+    public partial class FrmManHinhLamViec : Form
     {
-        public FrmMainScreen()
+        public FrmManHinhLamViec()
         {
             InitializeComponent();
-        }
-
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void BtnThoat_Click(object sender, EventArgs e)
@@ -34,6 +29,15 @@ namespace TestGUI1.View
                 this.Close();
             }
             // Nếu người dùng chọn "No", không làm gì cả
+        }
+
+        private void FrmManHinhLamViec_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dBQuanLyKhachSanDataSet.DichVu' table. You can move, or remove it, as needed.
+            this.dichVuTableAdapter.Fill(this.dBQuanLyKhachSanDataSet.DichVu);
+            // TODO: This line of code loads data into the 'dBQuanLyKhachSanDataSet.LoaiPhong' table. You can move, or remove it, as needed.
+            this.loaiPhongTableAdapter.Fill(this.dBQuanLyKhachSanDataSet.LoaiPhong);
+
         }
     }
 }

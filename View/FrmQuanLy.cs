@@ -19,16 +19,12 @@ namespace TestGUI1.View
         }
         private void FrmQuanLy_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dBQuanLyKhachSanDataSet.HoaDon' table. You can move, or remove it, as needed.
-            this.hoaDonTableAdapter.Fill(this.dBQuanLyKhachSanDataSet.HoaDon);
-            // TODO: This line of code loads data into the 'dBQuanLyKhachSanDataSet.NhanVien' table. You can move, or remove it, as needed.
-            this.nhanVienTableAdapter.Fill(this.dBQuanLyKhachSanDataSet.NhanVien);
-            // TODO: This line of code loads data into the 'dBQuanLyKhachSanDataSet.DichVu' table. You can move, or remove it, as needed.
-            this.dichVuTableAdapter.Fill(this.dBQuanLyKhachSanDataSet.DichVu);
             // TODO: This line of code loads data into the 'dBQuanLyKhachSanDataSet.Phong' table. You can move, or remove it, as needed.
             this.phongTableAdapter.Fill(this.dBQuanLyKhachSanDataSet.Phong);
-            // TODO: This line of code loads data into the 'dBQuanLyKhachSanDataSet.LoaiPhong' table. You can move, or remove it, as needed.
-            this.loaiPhongTableAdapter1.Fill(this.dBQuanLyKhachSanDataSet.LoaiPhong);
+            // TODO: This line of code loads data into the 'dBQuanLyKhachSanDataSet.DatPhong' table. You can move, or remove it, as needed.
+            this.datPhongTableAdapter.Fill(this.dBQuanLyKhachSanDataSet.DatPhong);
+            // TODO: This line of code loads data into the 'dBQuanLyKhachSanDataSet.KhachHang' table. You can move, or remove it, as needed.
+            this.khachHangTableAdapter.Fill(this.dBQuanLyKhachSanDataSet.KhachHang);
         }
 
         private void BtnTab1ThemMoi_Click(object sender, EventArgs e)
@@ -36,15 +32,6 @@ namespace TestGUI1.View
             try
             { 
                 // Thực hiện thêm vào bảng LoaiPhong
-                this.loaiPhongTableAdapter1.Insert(
-                    Convert.ToInt32(TxtTab1IdLoaiPhong.Text),
-                    TxtTab1TenLoaiPhong.Text,
-                    Convert.ToInt32(TxtTab1SoNguoi.Text),
-                    decimal.Parse(TxtTab1GiaGioDau.Text),
-                    decimal.Parse(TxtTab1GiaGioTiepTheo.Text),
-                    decimal.Parse(TxtTab1GiaQuaDem.Text),
-                    decimal.Parse(TxtTab1GiaTheoNgay.Text)
-                );
 
                 // Hiển thị thông báo và làm mới dữ liệu
                 MessageBox.Show("Thêm loại phòng thành công!");
@@ -72,8 +59,6 @@ namespace TestGUI1.View
 
         private void RefreshData()
         {
-            // Load lại dữ liệu từ cơ sở dữ liệu và hiển thị trong DataGridView
-            this.loaiPhongTableAdapter1.Fill(this.dBQuanLyKhachSanDataSet.LoaiPhong);
         }
 
     }

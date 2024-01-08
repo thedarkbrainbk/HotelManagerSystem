@@ -44,7 +44,7 @@ namespace TestGUI1.View
             }
 
             // Mở form chính khi đăng nhập thành công
-            FrmMainScreen frmMain = new FrmMainScreen();
+            FrmManHinhLamViec frmMain = new FrmManHinhLamViec();
             frmMain.Show();
             this.Hide(); // Ẩn form đăng nhập
         }

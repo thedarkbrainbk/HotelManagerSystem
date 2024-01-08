@@ -13,10 +13,14 @@ C:\Users\Nguyen Khac Anh Tuan\Desktop\TestTuan10\TestGUI1\obj\Debug\TestGUI1.pdb
 C:\Users\Nguyen Khac Anh Tuan\Desktop\TestTuan10\TestGUI1\obj\Debug\TestGUI1.View.FrmDangNhap.resources
 C:\Users\Nguyen Khac Anh Tuan\Desktop\TestTuan10\TestGUI1\obj\Debug\TestGUI1.View.FrmChiTietHoaDon.resources
 C:\Users\Nguyen Khac Anh Tuan\Desktop\TestTuan10\TestGUI1\obj\Debug\TestGUI1.View.FrmQuanLy.resources
-C:\Users\Nguyen Khac Anh Tuan\Desktop\TestTuan10\TestGUI1\obj\Debug\TestGUI1.View.FrmMainScreen.resources
 C:\Users\Nguyen Khac Anh Tuan\Desktop\TestTuan10\TestGUI1\bin\Debug\EntityFramework.dll
 C:\Users\Nguyen Khac Anh Tuan\Desktop\TestTuan10\TestGUI1\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Nguyen Khac Anh Tuan\Desktop\TestTuan10\TestGUI1\bin\Debug\EntityFramework.xml
 C:\Users\Nguyen Khac Anh Tuan\Desktop\TestTuan10\TestGUI1\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Nguyen Khac Anh Tuan\Desktop\TestTuan10\TestGUI1\bin\Debug\DBQuanLyKhachSan.mdf
 C:\Users\Nguyen Khac Anh Tuan\Desktop\TestTuan10\TestGUI1\bin\Debug\DBQuanLyKhachSan_log.ldf
+C:\Users\Nguyen Khac Anh Tuan\Desktop\TestTuan10\TestGUI1\obj\Debug\TestGUI1.View.FrmGoiDichVu.resources
+C:\Users\Nguyen Khac Anh Tuan\Desktop\TestTuan10\TestGUI1\obj\Debug\TestGUI1.View.FrmDatPhong.resources
+C:\Users\Nguyen Khac Anh Tuan\Desktop\TestTuan10\TestGUI1\obj\Debug\TestGUI1.View.FrmManHinhLamViec.resources
+C:\Users\Nguyen Khac Anh Tuan\Desktop\TestTuan10\TestGUI1\obj\Debug\TestGUI1.View.FrmNhanPhong.resources
+C:\Users\Nguyen Khac Anh Tuan\Desktop\TestTuan10\TestGUI1\obj\Debug\TestGUI1.View.FrmTaiKhoan.resources

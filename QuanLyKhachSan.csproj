@@ -88,11 +88,29 @@
     <Compile Include="View\FrmChiTietHoaDon.Designer.cs">
       <DependentUpon>FrmChiTietHoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FrmMainScreen.cs">
+    <Compile Include="View\FrmDatPhong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FrmMainScreen.Designer.cs">
-      <DependentUpon>FrmMainScreen.cs</DependentUpon>
+    <Compile Include="View\FrmDatPhong.Designer.cs">
+      <DependentUpon>FrmDatPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmGoiDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmGoiDichVu.Designer.cs">
+      <DependentUpon>FrmGoiDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmManHinhLamViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmManHinhLamViec.Designer.cs">
+      <DependentUpon>FrmManHinhLamViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmNhanPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmNhanPhong.Designer.cs">
+      <DependentUpon>FrmNhanPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FrmQuanLy.cs">
       <SubType>Form</SubType>
@@ -108,11 +126,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\FrmTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmTaiKhoan.Designer.cs">
+      <DependentUpon>FrmTaiKhoan.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\FrmChiTietHoaDon.resx">
       <DependentUpon>FrmChiTietHoaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FrmMainScreen.resx">
-      <DependentUpon>FrmMainScreen.cs</DependentUpon>
+    <EmbeddedResource Include="View\FrmDatPhong.resx">
+      <DependentUpon>FrmDatPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmGoiDichVu.resx">
+      <DependentUpon>FrmGoiDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmManHinhLamViec.resx">
+      <DependentUpon>FrmManHinhLamViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmNhanPhong.resx">
+      <DependentUpon>FrmNhanPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FrmQuanLy.resx">
       <DependentUpon>FrmQuanLy.cs</DependentUpon>
@@ -129,6 +162,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\FrmTaiKhoan.resx">
+      <DependentUpon>FrmTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DBQuanLyKhachSanDataSet.xsc">
       <DependentUpon>DBQuanLyKhachSanDataSet.xsd</DependentUpon>
     </None>
@@ -155,6 +191,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Class\" />
     <Folder Include="Icon\" />
   </ItemGroup>
   <ItemGroup>

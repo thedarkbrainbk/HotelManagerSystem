@@ -16,5 +16,10 @@ namespace TestGUI1.View
         {
             InitializeComponent();
         }
+
+        private void FrmChiTietHoaDon_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dBQuanLyKhachSanDataSet.HoaDonDichVu' table. You can move, or remove it, as needed.
+        }
     }
 }
