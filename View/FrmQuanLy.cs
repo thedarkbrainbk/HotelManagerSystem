@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TestGUI1.View.FrmCRUD;
 
 namespace TestGUI1.View
 {
@@ -30,7 +31,9 @@ namespace TestGUI1.View
         private void BtnTab1ThemMoi_Click(object sender, EventArgs e)
         {
             try
-            { 
+            {
+                FrmCRUDLoaiPhong frm = new FrmCRUDLoaiPhong();
+                frm.Show();
                 // Thực hiện thêm vào bảng LoaiPhong
 
                 // Hiển thị thông báo và làm mới dữ liệu
@@ -61,5 +64,46 @@ namespace TestGUI1.View
         {
         }
 
+        private void rjButton38_Click(object sender, EventArgs e)
+        {
+            FrmManHinhLamViec frmManHinhLamViec = new FrmManHinhLamViec();
+            frmManHinhLamViec.Show();
+        }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            FrmCRUDDanhSachPhong frm = new FrmCRUDDanhSachPhong();
+            frm.Show();
+        }
+
+        private void rjButton4_Click(object sender, EventArgs e)
+        {
+            FrmCRUDDichVu frm = new FrmCRUDDichVu();
+            frm.Show();
+        }
+
+        private void rjButton10_Click(object sender, EventArgs e)
+        {
+            FrmCRUDHoaDon frm = new FrmCRUDHoaDon();
+            frm.Show();
+        }
+
+        private void rjButton6_Click(object sender, EventArgs e)
+        {
+            FrmCRUDNhanVien frm = new FrmCRUDNhanVien();
+            frm.Show();
+        }
+
+        private void rjButton30_Click(object sender, EventArgs e)
+        {
+            FrmCRUDKhachHang frm = new FrmCRUDKhachHang();
+            frm.Show();
+        }
+
+        private void rjButton20_Click(object sender, EventArgs e)
+        {
+            FrmCRUDChamCong frm = new FrmCRUDChamCong();
+            frm.Show();
+        }
     }
 }
