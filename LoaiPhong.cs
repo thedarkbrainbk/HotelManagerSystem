@@ -8,15 +8,15 @@ namespace TestGUI1
 {
     public class LoaiPhong
     {
-        private int idLoaiPhong;
+        private string idLoaiPhong;
         private string tenLoaiPhong;
         private int soNguoi;
-        private decimal giaGioDau;
-        private decimal giaGioTiepTheo;
-        private decimal giaQuaDem;
-        private decimal giaTheoNgay;
+        private int giaGioDau;
+        private int giaGioTiepTheo;
+        private int giaQuaDem;
+        private int giaTheoNgay;
 
-        public int IdLoaiPhong
+        public string IdLoaiPhong
         {
             get { return idLoaiPhong; }
             set { idLoaiPhong = value; }
@@ -34,25 +34,25 @@ namespace TestGUI1
             set { soNguoi = value; }
         }
 
-        public decimal GiaGioDau
+        public int GiaGioDau
         {
             get { return giaGioDau; }
             set { giaGioDau = value; }
         }
 
-        public decimal GiaGioTiepTheo
+        public int GiaGioTiepTheo
         {
             get { return giaGioTiepTheo; }
             set { giaGioTiepTheo = value; }
         }
 
-        public decimal GiaQuaDem
+        public int GiaQuaDem
         {
             get { return giaQuaDem; }
             set { giaQuaDem = value; }
         }
 
-        public decimal GiaTheoNgay
+        public int GiaTheoNgay
         {
             get { return giaTheoNgay; }
             set { giaTheoNgay = value; }
@@ -62,7 +62,7 @@ namespace TestGUI1
         {
         }
 
-        public LoaiPhong(int idLoaiPhong, string tenLoaiPhong, int soNguoi, decimal giaGioDau, decimal giaGioTiepTheo, decimal giaQuaDem, decimal giaTheoNgay)
+        public LoaiPhong(string idLoaiPhong, string tenLoaiPhong, int soNguoi, int giaGioDau, int giaGioTiepTheo, int giaQuaDem, int giaTheoNgay)
         {
             IdLoaiPhong = idLoaiPhong;
             TenLoaiPhong = tenLoaiPhong;

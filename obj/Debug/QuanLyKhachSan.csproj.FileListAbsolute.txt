@@ -31,3 +31,38 @@ C:\Users\admin\Source\Repos\haiduc2511\HotelManagerSystem\obj\Debug\TestGUI1.Vie
 C:\Users\admin\Source\Repos\haiduc2511\HotelManagerSystem\obj\Debug\QuanLyKhachSan.csproj.CopyComplete
 C:\Users\admin\Source\Repos\haiduc2511\HotelManagerSystem\obj\Debug\TestGUI1.exe
 C:\Users\admin\Source\Repos\haiduc2511\HotelManagerSystem\obj\Debug\TestGUI1.pdb
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\obj\Debug\QuanLyKhachSan.csproj.AssemblyReference.cache
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\obj\Debug\QuanLyKhachSan.csproj.SuggestedBindingRedirects.cache
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\obj\Debug\TestGUI1.View.FrmCRUD2.FrmSuaDichVu.resources
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\obj\Debug\TestGUI1.View.FrmCRUD2.FrmSuaKhachHang.resources
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\obj\Debug\TestGUI1.View.FrmCRUD2.FrmSuaLoaiPhong.resources
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\obj\Debug\TestGUI1.View.FrmCRUD2.FrmSuaPhong.resources
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\obj\Debug\TestGUI1.View.FrmCRUD2.FrmThemDichVu.resources
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\obj\Debug\TestGUI1.View.FrmCRUD2.FrmThemLoaiPhong.resources
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\obj\Debug\TestGUI1.View.FrmCRUD2.FrmThemNhanVien.resources
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\obj\Debug\TestGUI1.View.FrmCRUD2.FrmThemPhong.resources
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\obj\Debug\TestGUI1.View.FrmChiTietHoaDon.resources
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\obj\Debug\TestGUI1.View.FrmDatPhong.resources
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\obj\Debug\TestGUI1.View.FrmGoiDichVu.resources
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\obj\Debug\TestGUI1.View.FrmManHinhLamViec.resources
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\obj\Debug\TestGUI1.View.FrmNhanPhong.resources
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\obj\Debug\TestGUI1.View.FrmQuanLy.resources
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\obj\Debug\TestGUI1.View.FrmDangNhap.resources
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\obj\Debug\TestGUI1.Properties.Resources.resources
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\obj\Debug\TestGUI1.View.FrmTaiKhoan.resources
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\obj\Debug\QuanLyKhachSan.csproj.GenerateResource.cache
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\obj\Debug\QuanLyKhachSan.csproj.CoreCompileInputs.cache
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\obj\Debug\TestGUI1.exe
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\obj\Debug\TestGUI1.pdb
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\bin\Debug\DBQuanLyKhachSan.mdf
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\bin\Debug\DBQuanLyKhachSan_log.ldf
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\bin\Debug\TestGUI1.exe.config
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\bin\Debug\TestGUI1.exe
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\bin\Debug\TestGUI1.pdb
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\bin\Debug\EntityFramework.dll
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\bin\Debug\RJCodeAdvance.RJControls.dll
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\bin\Debug\EntityFramework.xml
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\obj\Debug\QuanLyKhachSan.csproj.CopyComplete
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\obj\Debug\TestGUI1.View.FrmCRUD2.FrmSuaNhanVien.resources

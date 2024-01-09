@@ -58,7 +58,7 @@
       <HintPath>packages\RJCodeAdvance.RJControls.1.0.0\lib\net45\RJCodeAdvance.RJControls.dll</HintPath>
     </Reference>
     <Reference Include="System">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -75,6 +75,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DbConnect.cs" />
     <Compile Include="DBQuanLyKhachSanDataSet.cs">
       <DependentUpon>DBQuanLyKhachSanDataSet.xsd</DependentUpon>
     </Compile>
@@ -83,157 +84,166 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBQuanLyKhachSanDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DichVu.cs" />
+    <Compile Include="ModelQuanLy.cs" />
+    <Compile Include="HoaDon.cs" />
+    <Compile Include="HoaDonDichVu.cs" />
+    <Compile Include="KhachHang.cs" />
     <Compile Include="LoaiPhong.cs" />
-    <Compile Include="View\FrmCRUD\FrmCRUDChamCong.cs">
+    <Compile Include="NhanVien.cs" />
+    <Compile Include="Phong.cs" />
+    <Compile Include="QuanLy.cs" />
+    <Compile Include="SPClass.cs" />
+    <Compile Include="View\FrmCRUD2\FrmSuaDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FrmCRUD\FrmCRUDChamCong.Designer.cs">
-      <DependentUpon>FrmCRUDChamCong.cs</DependentUpon>
+    <Compile Include="View\FrmCRUD2\FrmSuaDichVu.Designer.cs">
+      <DependentUpon>FrmSuaDichVu.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FrmCRUD\FrmCRUDDatPhong.cs">
+    <Compile Include="View\FrmCRUD2\FrmSuaKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FrmCRUD\FrmCRUDDatPhong.Designer.cs">
-      <DependentUpon>FrmCRUDDatPhong.cs</DependentUpon>
+    <Compile Include="View\FrmCRUD2\FrmSuaKhachHang.Designer.cs">
+      <DependentUpon>FrmSuaKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FrmCRUD\FrmCRUDDichVu.cs">
+    <Compile Include="View\FrmCRUD2\FrmSuaLoaiPhong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FrmCRUD\FrmCRUDDichVu.Designer.cs">
-      <DependentUpon>FrmCRUDDichVu.cs</DependentUpon>
+    <Compile Include="View\FrmCRUD2\FrmSuaLoaiPhong.Designer.cs">
+      <DependentUpon>FrmSuaLoaiPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FrmCRUD\FrmCRUDHoaDonDichVu.cs">
+    <Compile Include="View\FrmCRUD2\FrmSuaPhong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FrmCRUD\FrmCRUDHoaDonDichVu.Designer.cs">
-      <DependentUpon>FrmCRUDHoaDonDichVu.cs</DependentUpon>
+    <Compile Include="View\FrmCRUD2\FrmSuaPhong.Designer.cs">
+      <DependentUpon>FrmSuaPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FrmCRUD\FrmCRUDHoaDon.cs">
+    <Compile Include="View\FrmCRUD2\FrmSuaNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FrmCRUD\FrmCRUDHoaDon.Designer.cs">
-      <DependentUpon>FrmCRUDHoaDon.cs</DependentUpon>
+    <Compile Include="View\FrmCRUD2\FrmSuaNhanVien.Designer.cs">
+      <DependentUpon>FrmSuaNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FrmCRUD\FrmCRUDKhachHang.cs">
+    <Compile Include="View\FrmCRUD2\FrmThemDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FrmCRUD\FrmCRUDKhachHang.Designer.cs">
-      <DependentUpon>FrmCRUDKhachHang.cs</DependentUpon>
+    <Compile Include="View\FrmCRUD2\FrmThemDichVu.Designer.cs">
+      <DependentUpon>FrmThemDichVu.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FrmCRUD\FrmCRUDNhanVien.cs">
+    <Compile Include="View\FrmCRUD2\FrmThemLoaiPhong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FrmCRUD\FrmCRUDNhanVien.Designer.cs">
-      <DependentUpon>FrmCRUDNhanVien.cs</DependentUpon>
+    <Compile Include="View\FrmCRUD2\FrmThemLoaiPhong.Designer.cs">
+      <DependentUpon>FrmThemLoaiPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FrmCRUD\FrmCRUDDanhSachPhong.cs">
+    <Compile Include="View\FrmCRUD2\FrmThemNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FrmCRUD\FrmCRUDDanhSachPhong.Designer.cs">
-      <DependentUpon>FrmCRUDDanhSachPhong.cs</DependentUpon>
+    <Compile Include="View\FrmCRUD2\FrmThemNhanVien.Designer.cs">
+      <DependentUpon>FrmThemNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FrmChiTietHoaDon.cs">
+    <Compile Include="View\FrmCRUD2\FrmThemPhong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FrmChiTietHoaDon.Designer.cs">
+    <Compile Include="View\FrmCRUD2\FrmThemPhong.Designer.cs">
+      <DependentUpon>FrmThemPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmChinh\FrmChiTietHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmChinh\FrmChiTietHoaDon.Designer.cs">
       <DependentUpon>FrmChiTietHoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FrmCRUD\FrmCRUDLoaiPhong.cs">
+    <Compile Include="View\FrmChinh\FrmDatPhong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FrmCRUD\FrmCRUDLoaiPhong.Designer.cs">
-      <DependentUpon>FrmCRUDLoaiPhong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\FrmDatPhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\FrmDatPhong.Designer.cs">
+    <Compile Include="View\FrmChinh\FrmDatPhong.Designer.cs">
       <DependentUpon>FrmDatPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FrmGoiDichVu.cs">
+    <Compile Include="View\FrmChinh\FrmGoiDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FrmGoiDichVu.Designer.cs">
+    <Compile Include="View\FrmChinh\FrmGoiDichVu.Designer.cs">
       <DependentUpon>FrmGoiDichVu.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FrmManHinhLamViec.cs">
+    <Compile Include="View\FrmChinh\FrmManHinhLamViec.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FrmManHinhLamViec.Designer.cs">
+    <Compile Include="View\FrmChinh\FrmManHinhLamViec.Designer.cs">
       <DependentUpon>FrmManHinhLamViec.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FrmNhanPhong.cs">
+    <Compile Include="View\FrmChinh\FrmNhanPhong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FrmNhanPhong.Designer.cs">
+    <Compile Include="View\FrmChinh\FrmNhanPhong.Designer.cs">
       <DependentUpon>FrmNhanPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FrmQuanLy.cs">
+    <Compile Include="View\FrmChinh\FrmQuanLy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FrmQuanLy.Designer.cs">
+    <Compile Include="View\FrmChinh\FrmQuanLy.Designer.cs">
       <DependentUpon>FrmQuanLy.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FrmDangNhap.cs">
+    <Compile Include="View\FrmChinh\FrmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FrmDangNhap.Designer.cs">
+    <Compile Include="View\FrmChinh\FrmDangNhap.Designer.cs">
       <DependentUpon>FrmDangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\FrmTaiKhoan.cs">
+    <Compile Include="View\FrmChinh\FrmTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FrmTaiKhoan.Designer.cs">
+    <Compile Include="View\FrmChinh\FrmTaiKhoan.Designer.cs">
       <DependentUpon>FrmTaiKhoan.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\FrmCRUD\FrmCRUDChamCong.resx">
-      <DependentUpon>FrmCRUDChamCong.cs</DependentUpon>
+    <EmbeddedResource Include="View\FrmCRUD2\FrmSuaDichVu.resx">
+      <DependentUpon>FrmSuaDichVu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FrmCRUD\FrmCRUDDatPhong.resx">
-      <DependentUpon>FrmCRUDDatPhong.cs</DependentUpon>
+    <EmbeddedResource Include="View\FrmCRUD2\FrmSuaKhachHang.resx">
+      <DependentUpon>FrmSuaKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FrmCRUD\FrmCRUDDichVu.resx">
-      <DependentUpon>FrmCRUDDichVu.cs</DependentUpon>
+    <EmbeddedResource Include="View\FrmCRUD2\FrmSuaLoaiPhong.resx">
+      <DependentUpon>FrmSuaLoaiPhong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FrmCRUD\FrmCRUDHoaDon.resx">
-      <DependentUpon>FrmCRUDHoaDon.cs</DependentUpon>
+    <EmbeddedResource Include="View\FrmCRUD2\FrmSuaPhong.resx">
+      <DependentUpon>FrmSuaPhong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FrmCRUD\FrmCRUDHoaDonDichVu.resx">
-      <DependentUpon>FrmCRUDHoaDonDichVu.cs</DependentUpon>
+    <EmbeddedResource Include="View\FrmCRUD2\FrmSuaNhanVien.resx">
+      <DependentUpon>FrmSuaNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FrmCRUD\FrmCRUDKhachHang.resx">
-      <DependentUpon>FrmCRUDKhachHang.cs</DependentUpon>
+    <EmbeddedResource Include="View\FrmCRUD2\FrmThemDichVu.resx">
+      <DependentUpon>FrmThemDichVu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FrmCRUD\FrmCRUDNhanVien.resx">
-      <DependentUpon>FrmCRUDNhanVien.cs</DependentUpon>
+    <EmbeddedResource Include="View\FrmCRUD2\FrmThemLoaiPhong.resx">
+      <DependentUpon>FrmThemLoaiPhong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FrmCRUD\FrmCRUDDanhSachPhong.resx">
-      <DependentUpon>FrmCRUDDanhSachPhong.cs</DependentUpon>
+    <EmbeddedResource Include="View\FrmCRUD2\FrmThemNhanVien.resx">
+      <DependentUpon>FrmThemNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FrmChiTietHoaDon.resx">
+    <EmbeddedResource Include="View\FrmCRUD2\FrmThemPhong.resx">
+      <DependentUpon>FrmThemPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmChinh\FrmChiTietHoaDon.resx">
       <DependentUpon>FrmChiTietHoaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FrmCRUD\FrmCRUDLoaiPhong.resx">
-      <DependentUpon>FrmCRUDLoaiPhong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\FrmDatPhong.resx">
+    <EmbeddedResource Include="View\FrmChinh\FrmDatPhong.resx">
       <DependentUpon>FrmDatPhong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FrmGoiDichVu.resx">
+    <EmbeddedResource Include="View\FrmChinh\FrmGoiDichVu.resx">
       <DependentUpon>FrmGoiDichVu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FrmManHinhLamViec.resx">
+    <EmbeddedResource Include="View\FrmChinh\FrmManHinhLamViec.resx">
       <DependentUpon>FrmManHinhLamViec.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FrmNhanPhong.resx">
+    <EmbeddedResource Include="View\FrmChinh\FrmNhanPhong.resx">
       <DependentUpon>FrmNhanPhong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FrmQuanLy.resx">
+    <EmbeddedResource Include="View\FrmChinh\FrmQuanLy.resx">
       <DependentUpon>FrmQuanLy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FrmDangNhap.resx">
+    <EmbeddedResource Include="View\FrmChinh\FrmDangNhap.resx">
       <DependentUpon>FrmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -245,7 +255,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\FrmTaiKhoan.resx">
+    <EmbeddedResource Include="View\FrmChinh\FrmTaiKhoan.resx">
       <DependentUpon>FrmTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DBQuanLyKhachSanDataSet.xsc">
