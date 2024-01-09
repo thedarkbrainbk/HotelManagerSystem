@@ -57,7 +57,9 @@
     <Reference Include="RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\RJCodeAdvance.RJControls.1.0.0\lib\net45\RJCodeAdvance.RJControls.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -82,11 +84,65 @@
       <DependentUpon>DBQuanLyKhachSanDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="LoaiPhong.cs" />
+    <Compile Include="View\FrmCRUD\FrmCRUDChamCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmCRUD\FrmCRUDChamCong.Designer.cs">
+      <DependentUpon>FrmCRUDChamCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmCRUD\FrmCRUDDatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmCRUD\FrmCRUDDatPhong.Designer.cs">
+      <DependentUpon>FrmCRUDDatPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmCRUD\FrmCRUDDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmCRUD\FrmCRUDDichVu.Designer.cs">
+      <DependentUpon>FrmCRUDDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmCRUD\FrmCRUDHoaDonDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmCRUD\FrmCRUDHoaDonDichVu.Designer.cs">
+      <DependentUpon>FrmCRUDHoaDonDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmCRUD\FrmCRUDHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmCRUD\FrmCRUDHoaDon.Designer.cs">
+      <DependentUpon>FrmCRUDHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmCRUD\FrmCRUDKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmCRUD\FrmCRUDKhachHang.Designer.cs">
+      <DependentUpon>FrmCRUDKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmCRUD\FrmCRUDNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmCRUD\FrmCRUDNhanVien.Designer.cs">
+      <DependentUpon>FrmCRUDNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmCRUD\FrmCRUDDanhSachPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmCRUD\FrmCRUDDanhSachPhong.Designer.cs">
+      <DependentUpon>FrmCRUDDanhSachPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FrmChiTietHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\FrmChiTietHoaDon.Designer.cs">
       <DependentUpon>FrmChiTietHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmCRUD\FrmCRUDLoaiPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmCRUD\FrmCRUDLoaiPhong.Designer.cs">
+      <DependentUpon>FrmCRUDLoaiPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FrmDatPhong.cs">
       <SubType>Form</SubType>
@@ -132,8 +188,35 @@
     <Compile Include="View\FrmTaiKhoan.Designer.cs">
       <DependentUpon>FrmTaiKhoan.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\FrmCRUD\FrmCRUDChamCong.resx">
+      <DependentUpon>FrmCRUDChamCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmCRUD\FrmCRUDDatPhong.resx">
+      <DependentUpon>FrmCRUDDatPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmCRUD\FrmCRUDDichVu.resx">
+      <DependentUpon>FrmCRUDDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmCRUD\FrmCRUDHoaDon.resx">
+      <DependentUpon>FrmCRUDHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmCRUD\FrmCRUDHoaDonDichVu.resx">
+      <DependentUpon>FrmCRUDHoaDonDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmCRUD\FrmCRUDKhachHang.resx">
+      <DependentUpon>FrmCRUDKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmCRUD\FrmCRUDNhanVien.resx">
+      <DependentUpon>FrmCRUDNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmCRUD\FrmCRUDDanhSachPhong.resx">
+      <DependentUpon>FrmCRUDDanhSachPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FrmChiTietHoaDon.resx">
       <DependentUpon>FrmChiTietHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmCRUD\FrmCRUDLoaiPhong.resx">
+      <DependentUpon>FrmCRUDLoaiPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FrmDatPhong.resx">
       <DependentUpon>FrmDatPhong.cs</DependentUpon>
