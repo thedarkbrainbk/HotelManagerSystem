@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestGUI1
 {
-    internal class NhanVien
+    public class NhanVien
     {
         private string idNhanVien;
         private string tenNhanVien;

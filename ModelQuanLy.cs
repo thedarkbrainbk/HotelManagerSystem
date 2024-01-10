@@ -250,13 +250,16 @@ namespace TestGUI1
         #endregion
 
         #region Quản lý phòng
-        // Hàm lấy thông tin bảng Phong
+        // Hàm lấy thông tin bảng Phong và LoaiPhong
         public DataTable GetPhong()
         {
             try
             {
-                // Chuỗi truy vấn SQL để lấy toàn bộ thông tin từ bảng Phong
-                string selectQuery = "SELECT * FROM Phong";
+                // Chuỗi truy vấn SQL để lấy thông tin từ bảng Phong và LoaiPhong
+                string selectQuery = @"
+            SELECT P.IdPhong, P.TenPhong, LP.TenLoaiPhong, P.TinhTrangPhong, P.IsVip
+            FROM Phong P
+            JOIN LoaiPhong LP ON P.IdLoaiPhong = LP.IdLoaiPhong";
 
                 // Tạo đối tượng SqlCommand
                 SqlCommand command = new SqlCommand(selectQuery, connect.GetConnection());
@@ -273,7 +276,7 @@ namespace TestGUI1
                 // Đổ dữ liệu từ cơ sở dữ liệu vào DataTable
                 adapter.Fill(table);
 
-                // Trả về DataTable chứa thông tin từ bảng Phong
+                // Trả về DataTable chứa thông tin từ bảng Phong và LoaiPhong
                 return table;
             }
             catch (Exception ex)
@@ -287,52 +290,74 @@ namespace TestGUI1
         // Hàm thêm phòng
         public bool ThemPhong(string idPhong, string tenPhong, string idLoaiPhong, string tinhTrangPhong, bool isVip)
         {
-            try
+            if (string.IsNullOrEmpty(idPhong) || string.IsNullOrEmpty(tenPhong) || string.IsNullOrEmpty(idLoaiPhong))
             {
-                // Chuỗi truy vấn SQL để thêm phòng vào cơ sở dữ liệu
-                string insertQuery = "INSERT INTO Phong (IdPhong, TenPhong, idLoaiPhong, TinhTrangPhong, IsVip) VALUES (@IdPhong, @TenPhong, @IdLoaiPhong, @TinhTrangPhong, @IsVip)";
-
-                // Tạo đối tượng SqlCommand
-                SqlCommand command = new SqlCommand(insertQuery, connect.GetConnection());
-
-                // Thêm các tham số vào câu lệnh SQL
-                command.Parameters.Add("@IdPhong", SqlDbType.NVarChar).Value = idPhong;
-                command.Parameters.Add("@TenPhong", SqlDbType.NVarChar).Value = tenPhong;
-                command.Parameters.Add("@IdLoaiPhong", SqlDbType.NVarChar).Value = idLoaiPhong;
-                command.Parameters.Add("@TinhTrangPhong", SqlDbType.NVarChar).Value = tinhTrangPhong;
-                command.Parameters.Add("@IsVip", SqlDbType.Bit).Value = isVip;
-
-                // Mở kết nối
-                connect.OpenCon();
-
-                // Thực hiện câu lệnh SQL và kiểm tra số dòng bị ảnh hưởng
-                if (command.ExecuteNonQuery() == 1)
+                Console.WriteLine("Có giá trị null");
+                return false;
+            }
+            else
+            {
+                try
                 {
-                    // Đóng kết nối và trả về true nếu thành công
-                    connect.CloseCon();
-                    return true;
+                    Console.WriteLine(idPhong);
+                    Console.WriteLine(tenPhong);
+                    Console.WriteLine(idPhong);
+                    Console.WriteLine(tinhTrangPhong);
+                    Console.WriteLine(isVip);
+                    // Chuỗi truy vấn SQL để thêm phòng vào cơ sở dữ liệu
+                    string insertQuery = "INSERT INTO Phong (IdPhong, TenPhong, idLoaiPhong, TinhTrangPhong, IsVip) VALUES (@IdPhong, @TenPhong, @IdLoaiPhong, @TinhTrangPhong, @IsVip)";
+
+                    // Tạo đối tượng SqlCommand
+                    SqlCommand command = new SqlCommand(insertQuery, connect.GetConnection());
+
+                    // Thêm các tham số vào câu lệnh SQL
+                    command.Parameters.Add("@IdPhong", SqlDbType.NChar).Value = idPhong;
+                    command.Parameters.Add("@TenPhong", SqlDbType.NVarChar).Value = tenPhong;
+                    command.Parameters.Add("@IdLoaiPhong", SqlDbType.NChar).Value = idLoaiPhong;
+                    command.Parameters.Add("@TinhTrangPhong", SqlDbType.NVarChar).Value = tinhTrangPhong;
+                    command.Parameters.Add("@IsVip", SqlDbType.Bit).Value = isVip;
+
+                    // Mở kết nối
+                    connect.OpenCon();
+
+                    // Thực hiện câu lệnh SQL và kiểm tra số dòng bị ảnh hưởng
+                    if (command.ExecuteNonQuery() == 1)
+                    {
+                        // Đóng kết nối và trả về true nếu thành công
+                        connect.CloseCon();
+                        return true;
+                    }
+                    else
+                    {
+                        // Đóng kết nối và trả về false nếu thất bại
+                        connect.CloseCon();
+                        return false;
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    // Đóng kết nối và trả về false nếu thất bại
+                    // Xử lý ngoại lệ nếu có lỗi và trả về false
+                    Console.WriteLine($"Lỗi: {ex.Message}");
                     connect.CloseCon();
                     return false;
                 }
             }
-            catch (Exception ex)
-            {
-                // Xử lý ngoại lệ nếu có lỗi và trả về false
-                Console.WriteLine($"Lỗi: {ex.Message}");
-                connect.CloseCon();
-                return false;
-            }
         }
 
-        // Hàm sửa thông tin bảng Phong
-        public bool SuaPhong(string idPhong, string tenPhong, string idLoaiPhong, string tinhTrangPhong, bool isVip)
+        public bool SuaPhong(string idPhong, string tenPhong, string tenLoaiPhong, string tinhTrangPhong, bool isVip)
         {
             try
             {
+                // Trước hết, lấy idLoaiPhong từ tenLoaiPhong
+                string idLoaiPhong = GetIdLoaiPhongByTenLoaiPhong(tenLoaiPhong);
+
+                // Kiểm tra xem idLoaiPhong có giá trị không
+                if (string.IsNullOrEmpty(idLoaiPhong))
+                {
+                    Console.WriteLine("Không tìm thấy idLoaiPhong cho tenLoaiPhong đã cho.");
+                    return false;
+                }
+
                 // Chuỗi truy vấn SQL để sửa thông tin phòng trong cơ sở dữ liệu
                 string updateQuery = "UPDATE Phong SET TenPhong = @TenPhong, idLoaiPhong = @IdLoaiPhong, TinhTrangPhong = @TinhTrangPhong, IsVip = @IsVip WHERE IdPhong = @IdPhong";
 
@@ -340,9 +365,9 @@ namespace TestGUI1
                 SqlCommand command = new SqlCommand(updateQuery, connect.GetConnection());
 
                 // Thêm các tham số vào câu lệnh SQL
-                command.Parameters.Add("@IdPhong", SqlDbType.NVarChar).Value = idPhong;
+                command.Parameters.Add("@IdPhong", SqlDbType.NChar).Value = idPhong;
                 command.Parameters.Add("@TenPhong", SqlDbType.NVarChar).Value = tenPhong;
-                command.Parameters.Add("@IdLoaiPhong", SqlDbType.NVarChar).Value = idLoaiPhong;
+                command.Parameters.Add("@IdLoaiPhong", SqlDbType.NChar).Value = idLoaiPhong;
                 command.Parameters.Add("@TinhTrangPhong", SqlDbType.NVarChar).Value = tinhTrangPhong;
                 command.Parameters.Add("@IsVip", SqlDbType.Bit).Value = isVip;
 
@@ -371,6 +396,41 @@ namespace TestGUI1
                 return false;
             }
         }
+
+        // Hàm lấy idLoaiPhong từ tenLoaiPhong
+        private string GetIdLoaiPhongByTenLoaiPhong(string tenLoaiPhong)
+        {
+            try
+            {
+                string selectQuery = "SELECT IdLoaiPhong FROM LoaiPhong WHERE TenLoaiPhong = @TenLoaiPhong";
+
+                SqlCommand command = new SqlCommand(selectQuery, connect.GetConnection());
+                command.Parameters.Add("@TenLoaiPhong", SqlDbType.NVarChar).Value = tenLoaiPhong;
+
+                connect.OpenCon();
+
+                object result = command.ExecuteScalar();
+
+                if (result != null)
+                {
+                    return result.ToString();
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Lỗi: {ex.Message}");
+                return null;
+            }
+            finally
+            {
+                connect.CloseCon();
+            }
+        }
+
 
         // Hàm xoá phòng
         public bool XoaPhong(string idPhong)
@@ -583,12 +643,12 @@ namespace TestGUI1
         }
 
         // Hàm thêm khách hàng
-        public bool ThemKhachHang(string idKhachHang, string tenKhachHang, DateTime ngaySinh, string gioiTinh, string diaChi, string soDienThoai, string cccd, string boPhan)
+        public bool ThemKhachHang(string idKhachHang,string tenKhachHang,DateTime ngaySinh,string cccd,string diaChi,string soDienThoai)
         {
             try
             {
                 // Chuỗi truy vấn SQL để thêm khách hàng vào cơ sở dữ liệu
-                string insertQuery = "INSERT INTO KhachHang (IdKhachHang, TenKhachHang, NgaySinh, GioiTinh, DiaChi, SoDienThoai, CCCD, BoPhan) VALUES (@IdKhachHang, @TenKhachHang, @NgaySinh, @GioiTinh, @DiaChi, @SoDienThoai, @CCCD, @BoPhan)";
+                string insertQuery = "INSERT INTO KhachHang (IdKhachHang, TenKhachHang, NgaySinh, DiaChi, SoDienThoai, CCCD) VALUES (@IdKhachHang, @TenKhachHang, @NgaySinh, @DiaChi, @SoDienThoai, @CCCD)";
 
                 // Tạo đối tượng SqlCommand
                 SqlCommand command = new SqlCommand(insertQuery, connect.GetConnection());
@@ -597,11 +657,9 @@ namespace TestGUI1
                 command.Parameters.Add("@IdKhachHang", SqlDbType.NChar).Value = idKhachHang;
                 command.Parameters.Add("@TenKhachHang", SqlDbType.NVarChar).Value = tenKhachHang;
                 command.Parameters.Add("@NgaySinh", SqlDbType.Date).Value = ngaySinh;
-                command.Parameters.Add("@GioiTinh", SqlDbType.NVarChar).Value = gioiTinh;
                 command.Parameters.Add("@DiaChi", SqlDbType.NVarChar).Value = diaChi;
                 command.Parameters.Add("@SoDienThoai", SqlDbType.NVarChar).Value = soDienThoai;
                 command.Parameters.Add("@CCCD", SqlDbType.NVarChar).Value = cccd;
-                command.Parameters.Add("@BoPhan", SqlDbType.NVarChar).Value = boPhan;
 
                 // Mở kết nối
                 connect.OpenCon();
@@ -844,9 +902,278 @@ namespace TestGUI1
         }
         #endregion
 
+        #region Quản lý hoá đơn
+        // Hàm thêm hoá đơn
+        public bool ThemHoaDon(string idPhong, DateTime ngayLap, decimal tongTien)
+        {
+            try
+            {
+                // Chuỗi truy vấn SQL để thêm hoá đơn vào cơ sở dữ liệu
+                string insertQuery = "INSERT INTO HoaDon (IdPhong, NgayLap, TongTien) VALUES (@IdPhong, @NgayLap, @TongTien)";
+
+                // Tạo đối tượng SqlCommand
+                SqlCommand command = new SqlCommand(insertQuery, connect.GetConnection());
+
+                // Thêm các tham số vào câu lệnh SQL
+                command.Parameters.Add("@IdPhong", SqlDbType.NChar).Value = idPhong;
+                command.Parameters.Add("@NgayLap", SqlDbType.Date).Value = ngayLap;
+                command.Parameters.Add("@TongTien", SqlDbType.Decimal).Value = tongTien;
+
+                // Mở kết nối
+                connect.OpenCon();
+
+                // Thực hiện câu lệnh SQL và kiểm tra số dòng bị ảnh hưởng
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    // Đóng kết nối và trả về true nếu thành công
+                    connect.CloseCon();
+                    return true;
+                }
+                else
+                {
+                    // Đóng kết nối và trả về false nếu thất bại
+                    connect.CloseCon();
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Xử lý ngoại lệ nếu có lỗi và trả về false
+                Console.WriteLine($"Lỗi: {ex.Message}");
+                connect.CloseCon();
+                return false;
+            }
+        }
+        // Hàm thêm hoá đơn
+        public bool ThemHoaDon(string idKhachHang, string idNhanVien, string idPhong, DateTime ngayLap)
+        {
+            try
+            {
+                // Chuỗi truy vấn SQL để thêm hoá đơn vào cơ sở dữ liệu
+                string insertQuery = "INSERT INTO HoaDon (IdKhachHang, IdNhanVien, IdPhong, NgayLap) VALUES (@IdKhachHang, @IdNhanVien, @IdPhong, @NgayLap)";
+
+                // Tạo đối tượng SqlCommand
+                SqlCommand command = new SqlCommand(insertQuery, connect.GetConnection());
+
+                // Thêm các tham số vào câu lệnh SQL
+                command.Parameters.Add("@IdKhachHang", SqlDbType.NChar).Value = idKhachHang;
+                command.Parameters.Add("@IdNhanVien", SqlDbType.NChar).Value = idNhanVien;
+                command.Parameters.Add("@IdPhong", SqlDbType.NChar).Value = idPhong;
+                command.Parameters.Add("@NgayLap", SqlDbType.DateTime).Value = ngayLap;
+
+                // Mở kết nối
+                connect.OpenCon();
+
+                // Thực hiện câu lệnh SQL và kiểm tra số dòng bị ảnh hưởng
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    // Đóng kết nối và trả về true nếu thành công
+                    connect.CloseCon();
+                    return true;
+                }
+                else
+                {
+                    // Đóng kết nối và trả về false nếu thất bại
+                    connect.CloseCon();
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Xử lý ngoại lệ nếu có lỗi và trả về false
+                Console.WriteLine($"Lỗi: {ex.Message}");
+                connect.CloseCon();
+                return false;
+            }
+        }
+
+
+        // Hàm sửa thông tin hoá đơn
+        public bool SuaHoaDon(int idHoaDon, string idPhong, DateTime ngayLap, decimal tongTien)
+        {
+            try
+            {
+                // Chuỗi truy vấn SQL để sửa thông tin hoá đơn trong cơ sở dữ liệu
+                string updateQuery = "UPDATE HoaDon SET IdPhong = @IdPhong, NgayLap = @NgayLap, TongTien = @TongTien WHERE IdHoaDon = @IdHoaDon";
+
+                // Tạo đối tượng SqlCommand
+                SqlCommand command = new SqlCommand(updateQuery, connect.GetConnection());
+
+                // Thêm các tham số vào câu lệnh SQL
+                command.Parameters.Add("@IdHoaDon", SqlDbType.Int).Value = idHoaDon;
+                command.Parameters.Add("@IdPhong", SqlDbType.NChar).Value = idPhong;
+                command.Parameters.Add("@NgayLap", SqlDbType.Date).Value = ngayLap;
+                command.Parameters.Add("@TongTien", SqlDbType.Decimal).Value = tongTien;
+
+                // Mở kết nối
+                connect.OpenCon();
+
+                // Thực hiện câu lệnh SQL và kiểm tra số dòng bị ảnh hưởng
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    // Đóng kết nối và trả về true nếu thành công
+                    connect.CloseCon();
+                    return true;
+                }
+                else
+                {
+                    // Đóng kết nối và trả về false nếu thất bại
+                    connect.CloseCon();
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Xử lý ngoại lệ nếu có lỗi và trả về false
+                Console.WriteLine($"Lỗi: {ex.Message}");
+                connect.CloseCon();
+                return false;
+            }
+        }
+
+        // Hàm xoá hoá đơn
+        public bool XoaHoaDon(int idHoaDon)
+        {
+            try
+            {
+                // Chuỗi truy vấn SQL để xoá hoá đơn từ cơ sở dữ liệu
+                string deleteQuery = "DELETE FROM HoaDon WHERE IdHoaDon = @IdHoaDon";
+                SqlCommand command = new SqlCommand(deleteQuery, connect.GetConnection());
+
+                // Thay thế tham số trong câu lệnh SQL với giá trị thực tế
+                command.Parameters.Add("@IdHoaDon", SqlDbType.Int).Value = idHoaDon;
+
+                // Mở kết nối
+                connect.OpenCon();
+
+                // Thực hiện câu lệnh SQL và kiểm tra số dòng bị ảnh hưởng
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    // Đóng kết nối và trả về true nếu thành công
+                    connect.CloseCon();
+                    return true;
+                }
+                else
+                {
+                    // Đóng kết nối và trả về false nếu thất bại
+                    connect.CloseCon();
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Xử lý ngoại lệ nếu có lỗi và trả về false
+                Console.WriteLine($"Lỗi: {ex.Message}");
+                connect.CloseCon();
+                return false;
+            }
+        }
+        #endregion
+
+
 
 
         #region Hàm sử lý logic
+        #endregion
+
+        #region Hàm load dữ liệu từ database
+
+        // Lấy dữ liệu loại phòng
+        public List<LoaiPhong> GetLoaiPhongList()
+        {
+            List<LoaiPhong> loaiPhongList = new List<LoaiPhong>();
+
+            try
+            {
+                string selectQuery = "SELECT * FROM LoaiPhong";
+                SqlCommand command = new SqlCommand(selectQuery, connect.GetConnection());
+                connect.OpenCon();
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        // Tạo đối tượng LoaiPhong từ dữ liệu đọc được từ cơ sở dữ liệu
+                        LoaiPhong loaiPhong = new LoaiPhong
+                        {
+                            IdLoaiPhong = reader["IdLoaiPhong"].ToString(),
+                            TenLoaiPhong = reader["TenLoaiPhong"].ToString(),
+                            SoNguoi = Convert.ToInt32(reader["SoNguoi"]),
+                            GiaGioDau = Convert.ToInt32(reader["GiaGioDau"]),
+                            GiaGioTiepTheo = Convert.ToInt32(reader["GiaGioTiepTheo"]),
+                            GiaQuaDem = Convert.ToInt32(reader["GiaQuaDem"]),
+                            GiaTheoNgay = Convert.ToInt32(reader["GiaTheoNgay"])
+                        };
+
+                        loaiPhongList.Add(loaiPhong);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Lỗi: {ex.Message}");
+            }
+            finally
+            {
+                connect.CloseCon();
+            }
+
+            return loaiPhongList;
+        }
+
+        //Hàm lấy dữ liệu khách hàng
+        public List<KhachHang> GetKhachHangList()
+        {
+            List<KhachHang> khachHangList = new List<KhachHang>();
+
+            try
+            {
+                // Chuỗi truy vấn SQL để lấy thông tin từ bảng KhachHang
+                string selectQuery = "SELECT * FROM KhachHang";
+
+                // Tạo đối tượng SqlCommand
+                SqlCommand command = new SqlCommand(selectQuery, connect.GetConnection());
+
+                // Mở kết nối
+                connect.OpenCon();
+
+                // Sử dụng SqlDataReader để đọc dữ liệu từ cơ sở dữ liệu
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        // Tạo đối tượng KhachHang từ dữ liệu đọc được từ cơ sở dữ liệu
+                        KhachHang khachHang = new KhachHang
+                        {
+                            IdKhachHang = reader["IdKhachHang"].ToString(),
+                            TenKhachHang = reader["TenKhachHang"].ToString(),
+                            NgaySinh = Convert.ToDateTime(reader["NgaySinh"]),
+                            CCCD = reader["CCCD"].ToString(),
+                            DiaChi = reader["DiaChi"].ToString(),
+                            SoDienThoai = reader["SoDienThoai"].ToString()
+                        };
+
+                        // Thêm đối tượng KhachHang vào danh sách
+                        khachHangList.Add(khachHang);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Xử lý ngoại lệ nếu có lỗi
+                Console.WriteLine($"Lỗi: {ex.Message}");
+            }
+            finally
+            {
+                // Đóng kết nối sau khi sử dụng
+                connect.CloseCon();
+            }
+
+            // Trả về danh sách khách hàng
+            return khachHangList;
+        }
+
+
         #endregion
     }
 }

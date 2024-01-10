@@ -14,7 +14,7 @@ namespace TestGUI1
             DateTime thoiGianHienTai = DateTime.Now;
 
             // Tạo chuỗi IdDichVu từ thông tin về thời gian hiện tại
-            string id = $"{thoiGianHienTai.Hour:00}{thoiGianHienTai.Minute:00}{thoiGianHienTai.Day:00}{thoiGianHienTai.Month:00}{thoiGianHienTai.Year % 100:00}";
+            string id = $"{thoiGianHienTai.Hour:00}{thoiGianHienTai.Minute:00}{thoiGianHienTai.Second:00}{thoiGianHienTai.Day:00}{thoiGianHienTai.Month:00}{thoiGianHienTai.Year % 100:00}";
 
             return id;
         }

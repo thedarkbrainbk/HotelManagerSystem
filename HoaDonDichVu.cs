@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestGUI1
 {
-    internal class HoaDonDichVu
+    public class HoaDonDichVu
     {
         // Thuộc tính của đối tượng HoaDonDichVu
         private string idHoaDon;

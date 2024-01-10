@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyKhachSan
 {
-    internal class DichVu
+    public class DichVu
     {
         // Thuộc tính của đối tượng Dịch Vụ
         private string idDichVu;

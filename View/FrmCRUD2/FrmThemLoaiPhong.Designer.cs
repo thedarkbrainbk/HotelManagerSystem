@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.TxtGiaGioDau = new System.Windows.Forms.TextBox();
+            this.TxtSoNguoi = new System.Windows.Forms.TextBox();
             this.TxtTenLoaiPhong = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,14 +39,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.TxtMaLoaiPhong = new System.Windows.Forms.TextBox();
             this.BtnThoat = new RJCodeAdvance.RJControls.RJButton();
-            this.BtnXacNhan = new RJCodeAdvance.RJControls.RJButton();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.TxtGiaGioTiepTheo = new System.Windows.Forms.TextBox();
             this.TxtGiaQuaDem = new System.Windows.Forms.TextBox();
             this.TxtGiaTheoNgay = new System.Windows.Forms.TextBox();
-            this.TxtSoNguoi = new System.Windows.Forms.TextBox();
-            this.TxtGiaGioDau = new System.Windows.Forms.TextBox();
+            this.BtnXacNhan = new RJCodeAdvance.RJControls.RJButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,6 +107,26 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(744, 450);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
+            // TxtGiaGioDau
+            // 
+            this.TxtGiaGioDau.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanel1.SetColumnSpan(this.TxtGiaGioDau, 7);
+            this.TxtGiaGioDau.Location = new System.Drawing.Point(341, 204);
+            this.TxtGiaGioDau.Multiline = true;
+            this.TxtGiaGioDau.Name = "TxtGiaGioDau";
+            this.TxtGiaGioDau.Size = new System.Drawing.Size(260, 32);
+            this.TxtGiaGioDau.TabIndex = 2;
+            // 
+            // TxtSoNguoi
+            // 
+            this.TxtSoNguoi.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanel1.SetColumnSpan(this.TxtSoNguoi, 7);
+            this.TxtSoNguoi.Location = new System.Drawing.Point(341, 164);
+            this.TxtSoNguoi.Multiline = true;
+            this.TxtSoNguoi.Name = "TxtSoNguoi";
+            this.TxtSoNguoi.Size = new System.Drawing.Size(260, 32);
+            this.TxtSoNguoi.TabIndex = 1;
+            // 
             // TxtTenLoaiPhong
             // 
             this.TxtTenLoaiPhong.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -115,19 +135,7 @@
             this.TxtTenLoaiPhong.Multiline = true;
             this.TxtTenLoaiPhong.Name = "TxtTenLoaiPhong";
             this.TxtTenLoaiPhong.Size = new System.Drawing.Size(260, 32);
-            this.TxtTenLoaiPhong.TabIndex = 13;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label6.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.label6, 6);
-            this.label6.Location = new System.Drawing.Point(85, 327);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(129, 25);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Giá theo ngày";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.TxtTenLoaiPhong.TabIndex = 0;
             // 
             // label1
             // 
@@ -201,7 +209,8 @@
             this.TxtMaLoaiPhong.Name = "TxtMaLoaiPhong";
             this.TxtMaLoaiPhong.ReadOnly = true;
             this.TxtMaLoaiPhong.Size = new System.Drawing.Size(260, 32);
-            this.TxtMaLoaiPhong.TabIndex = 12;
+            this.TxtMaLoaiPhong.TabIndex = 9;
+            this.TxtMaLoaiPhong.Text = "024719100124";
             // 
             // BtnThoat
             // 
@@ -221,35 +230,11 @@
             this.BtnThoat.Name = "BtnThoat";
             this.tableLayoutPanel1.SetRowSpan(this.BtnThoat, 2);
             this.BtnThoat.Size = new System.Drawing.Size(100, 40);
-            this.BtnThoat.TabIndex = 17;
+            this.BtnThoat.TabIndex = 7;
             this.BtnThoat.Text = "Thoát";
             this.BtnThoat.TextColor = System.Drawing.Color.Black;
             this.BtnThoat.UseVisualStyleBackColor = false;
             this.BtnThoat.Click += new System.EventHandler(this.BtnThoat_Click);
-            // 
-            // BtnXacNhan
-            // 
-            this.BtnXacNhan.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BtnXacNhan.BackColor = System.Drawing.Color.LightGreen;
-            this.BtnXacNhan.BackgroundColor = System.Drawing.Color.LightGreen;
-            this.BtnXacNhan.BorderColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BtnXacNhan.BorderRadius = 10;
-            this.BtnXacNhan.BorderSize = 1;
-            this.tableLayoutPanel1.SetColumnSpan(this.BtnXacNhan, 4);
-            this.BtnXacNhan.FlatAppearance.BorderSize = 0;
-            this.BtnXacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnXacNhan.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnXacNhan.ForeColor = System.Drawing.Color.Black;
-            this.BtnXacNhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnXacNhan.Location = new System.Drawing.Point(145, 385);
-            this.BtnXacNhan.Name = "BtnXacNhan";
-            this.tableLayoutPanel1.SetRowSpan(this.BtnXacNhan, 2);
-            this.BtnXacNhan.Size = new System.Drawing.Size(120, 40);
-            this.BtnXacNhan.TabIndex = 16;
-            this.BtnXacNhan.Text = "Xác nhận";
-            this.BtnXacNhan.TextColor = System.Drawing.Color.Black;
-            this.BtnXacNhan.UseVisualStyleBackColor = false;
-            this.BtnXacNhan.Click += new System.EventHandler(this.BtnXacNhan_Click);
             // 
             // label7
             // 
@@ -275,6 +260,18 @@
             this.label8.Text = "Giá qua đêm";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label6.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.label6, 6);
+            this.label6.Location = new System.Drawing.Point(85, 327);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(129, 25);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Giá theo ngày";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // TxtGiaGioTiepTheo
             // 
             this.TxtGiaGioTiepTheo.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -283,7 +280,7 @@
             this.TxtGiaGioTiepTheo.Multiline = true;
             this.TxtGiaGioTiepTheo.Name = "TxtGiaGioTiepTheo";
             this.TxtGiaGioTiepTheo.Size = new System.Drawing.Size(261, 32);
-            this.TxtGiaGioTiepTheo.TabIndex = 21;
+            this.TxtGiaGioTiepTheo.TabIndex = 3;
             // 
             // TxtGiaQuaDem
             // 
@@ -293,7 +290,7 @@
             this.TxtGiaQuaDem.Multiline = true;
             this.TxtGiaQuaDem.Name = "TxtGiaQuaDem";
             this.TxtGiaQuaDem.Size = new System.Drawing.Size(262, 32);
-            this.TxtGiaQuaDem.TabIndex = 22;
+            this.TxtGiaQuaDem.TabIndex = 4;
             // 
             // TxtGiaTheoNgay
             // 
@@ -303,27 +300,31 @@
             this.TxtGiaTheoNgay.Multiline = true;
             this.TxtGiaTheoNgay.Name = "TxtGiaTheoNgay";
             this.TxtGiaTheoNgay.Size = new System.Drawing.Size(262, 34);
-            this.TxtGiaTheoNgay.TabIndex = 23;
+            this.TxtGiaTheoNgay.TabIndex = 5;
             // 
-            // TxtSoNguoi
+            // BtnXacNhan
             // 
-            this.TxtSoNguoi.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tableLayoutPanel1.SetColumnSpan(this.TxtSoNguoi, 7);
-            this.TxtSoNguoi.Location = new System.Drawing.Point(341, 164);
-            this.TxtSoNguoi.Multiline = true;
-            this.TxtSoNguoi.Name = "TxtSoNguoi";
-            this.TxtSoNguoi.Size = new System.Drawing.Size(260, 32);
-            this.TxtSoNguoi.TabIndex = 24;
-            // 
-            // TxtGiaGioDau
-            // 
-            this.TxtGiaGioDau.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tableLayoutPanel1.SetColumnSpan(this.TxtGiaGioDau, 7);
-            this.TxtGiaGioDau.Location = new System.Drawing.Point(341, 204);
-            this.TxtGiaGioDau.Multiline = true;
-            this.TxtGiaGioDau.Name = "TxtGiaGioDau";
-            this.TxtGiaGioDau.Size = new System.Drawing.Size(260, 32);
-            this.TxtGiaGioDau.TabIndex = 25;
+            this.BtnXacNhan.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnXacNhan.BackColor = System.Drawing.Color.LightGreen;
+            this.BtnXacNhan.BackgroundColor = System.Drawing.Color.LightGreen;
+            this.BtnXacNhan.BorderColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BtnXacNhan.BorderRadius = 10;
+            this.BtnXacNhan.BorderSize = 1;
+            this.tableLayoutPanel1.SetColumnSpan(this.BtnXacNhan, 4);
+            this.BtnXacNhan.FlatAppearance.BorderSize = 0;
+            this.BtnXacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnXacNhan.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnXacNhan.ForeColor = System.Drawing.Color.Black;
+            this.BtnXacNhan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnXacNhan.Location = new System.Drawing.Point(145, 385);
+            this.BtnXacNhan.Name = "BtnXacNhan";
+            this.tableLayoutPanel1.SetRowSpan(this.BtnXacNhan, 2);
+            this.BtnXacNhan.Size = new System.Drawing.Size(120, 40);
+            this.BtnXacNhan.TabIndex = 6;
+            this.BtnXacNhan.Text = "Xác nhận";
+            this.BtnXacNhan.TextColor = System.Drawing.Color.Black;
+            this.BtnXacNhan.UseVisualStyleBackColor = false;
+            this.BtnXacNhan.Click += new System.EventHandler(this.BtnXacNhan_Click);
             // 
             // FrmThemLoaiPhong
             // 

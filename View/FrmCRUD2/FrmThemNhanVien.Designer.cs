@@ -317,7 +317,7 @@
             this.CboGioiTinh.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.CboGioiTinh.Location = new System.Drawing.Point(375, 200);
+            this.CboGioiTinh.Location = new System.Drawing.Point(375, 204);
             this.CboGioiTinh.Name = "CboGioiTinh";
             this.CboGioiTinh.Size = new System.Drawing.Size(262, 29);
             this.CboGioiTinh.TabIndex = 27;
@@ -367,6 +367,7 @@
             this.Name = "FrmThemNhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmThemNhanVien";
+            this.Load += new System.EventHandler(this.FrmThemNhanVien_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

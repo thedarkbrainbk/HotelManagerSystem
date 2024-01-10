@@ -12,7 +12,7 @@ namespace TestGUI1.View.FrmCRUD2
 {
     public partial class FrmThemNhanVien : Form
     {
-        ModelQuanLy frmQuanLyClass = new ModelQuanLy();
+        ModelQuanLy modelQuanLy = new ModelQuanLy();
         public FrmThemNhanVien()
         {
             InitializeComponent();
@@ -54,11 +54,12 @@ namespace TestGUI1.View.FrmCRUD2
                 }
 
                 // Perform adding new employee
-                bool themNhanVien = frmQuanLyClass.ThemNhanVien(idNhanVien, tenNhanVien, ngaySinh, gioiTinh, diaChi, soDienThoai, cccd, boPhan);
+                bool themNhanVien = modelQuanLy.ThemNhanVien(idNhanVien, tenNhanVien, ngaySinh, gioiTinh, diaChi, soDienThoai, cccd, boPhan);
 
                 if (themNhanVien)
                 {
                     MessageBox.Show("Thêm nhân viên thành công!");
+                    this.Close();
                 }
                 else
                 {
@@ -70,6 +71,12 @@ namespace TestGUI1.View.FrmCRUD2
                 MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void FrmThemNhanVien_Load(object sender, EventArgs e)
+        {
+            string idRand = SPClass.TaoId();
+            TxtMaNhanVien.Text = idRand;
         }
     }
 }

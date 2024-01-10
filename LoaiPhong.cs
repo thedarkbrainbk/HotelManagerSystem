@@ -8,7 +8,7 @@ namespace TestGUI1
 {
     public class LoaiPhong
     {
-        private string idLoaiPhong;
+        private string maLoaiPhong;
         private string tenLoaiPhong;
         private int soNguoi;
         private int giaGioDau;
@@ -18,8 +18,8 @@ namespace TestGUI1
 
         public string IdLoaiPhong
         {
-            get { return idLoaiPhong; }
-            set { idLoaiPhong = value; }
+            get { return maLoaiPhong; }
+            set { maLoaiPhong = value; }
         }
 
         public string TenLoaiPhong
@@ -62,9 +62,9 @@ namespace TestGUI1
         {
         }
 
-        public LoaiPhong(string idLoaiPhong, string tenLoaiPhong, int soNguoi, int giaGioDau, int giaGioTiepTheo, int giaQuaDem, int giaTheoNgay)
+        public LoaiPhong(string maLoaiPhong, string tenLoaiPhong, int soNguoi, int giaGioDau, int giaGioTiepTheo, int giaQuaDem, int giaTheoNgay)
         {
-            IdLoaiPhong = idLoaiPhong;
+            maLoaiPhong = maLoaiPhong;
             TenLoaiPhong = tenLoaiPhong;
             SoNguoi = soNguoi;
             GiaGioDau = giaGioDau;

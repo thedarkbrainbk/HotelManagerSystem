@@ -316,7 +316,7 @@
             this.CboGioiTinh.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.CboGioiTinh.Location = new System.Drawing.Point(375, 204);
+            this.CboGioiTinh.Location = new System.Drawing.Point(375, 200);
             this.CboGioiTinh.Name = "CboGioiTinh";
             this.CboGioiTinh.Size = new System.Drawing.Size(262, 29);
             this.CboGioiTinh.TabIndex = 27;
@@ -353,6 +353,7 @@
             this.BtnXacNhan.Text = "Xác nhận";
             this.BtnXacNhan.TextColor = System.Drawing.Color.Black;
             this.BtnXacNhan.UseVisualStyleBackColor = false;
+            this.BtnXacNhan.Click += new System.EventHandler(this.BtnXacNhan_Click);
             // 
             // FrmSuaNhanVien
             // 

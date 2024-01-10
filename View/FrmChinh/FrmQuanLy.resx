@@ -117,95 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAA+VJREFUaEPtmUvITVEUx6+8yaMIeSWGGIs8EqKkPPIsDISMzCgGHuU98ZgoMmEk
-        I2LgNWQi8iyKSIqJUgh5/X/n3pX1nbvu951zHK6Lf/26d6/933ute79z9tn7fpUOtFYMqr6t03Cxqvo2
-        1Jbaa6TVYmT1bZ0GijXVt/nVVTwTu5NWvQ6Jx6JL0mqrCeKbmJS02qqzeCQOJq167RHPRbeklVGjxEXx
-        VJD4o7gjDgg+CMXeFZ8E/U/EBTFMLBLXxWtBH6+0idOPDz99jGce5mNe5icP+egnP3VQTybNEW8Fg+Ga
-        GCDQYHFDWN8bMV2gTmK/sD6gTRzhw299zMN8iPnJY33kp45csm8E0tcnl4z18W15jRfWB+OE1z1hfbsI
-        OG0V1sell0v9xUMxXzDxKeF1RmwTiwXXZ09hWinOiRm1V9omfPgZx3jm8SIP+chLfurIrN5ioTgqTotL
-        tVfDtykMor50O6uXvAsEdWRSL3Fe2J+pmfABqadDnRAM4KaYLUb/ZsYI8rLqUMdx0a5Y8L8Irie7TllX
-        o8mj641vJfJG3xbjIy/5EGO4/qlnBIFGWir4dDuSVlVXhf25PB/EWGHqIV6JyPtS0G9inK3Haa4I005B
-        bEnSaqB1AhOvphfivfA3zH2Bb54wDRXE8HsvbeL0mxhHjHm8lzz4TVE9dWpUtJ8IbRf4oqLPJq0fok08
-        Kpp5vNK5fqponmKbHSxN+KKiHwjvpU08Kpp5vJc8pRTNfoBYxERh6iO4ziMfcfpNbKQiH5DPVLhoNjo8
-        wdJMFranMPHIjrzpRznjpojISz5T4aKbqcJFHxFsXtLcEhwETKyvl0Xk5dq19RcxjvGR97AwFS6aG+Oz
-        8BPbfjm6Ed8J76VNPLoRmcd7yVPa6uEnQi2x5PGN+JuFBwG+qGg29t5rB4aoaObxXvKUUjR/NmIRM4WJ
-        k8dXEfmI28kHMS7yAflMhYueJvYGbBSc7bxWiMhL3ItxjI+8U4WpcNHNVOGi1wu/qTHY5/YVXvtE5CXu
-        1U8wPvL63IWL5jcIYhFzhWmIiDwG/SbGRR4gn6lw0dzN7JP9Rp3fKvBFqwf7Ye+lTTxaPZjHe8lT2pLX
-        ckW35OXB++iGOSbSNyJLVuQl7sW4RjciP3qaChfdTBUumoeLP10YG0T64cLBOPIS9+IXUcZHXvKZChf9
-        Kx7js0Tkg1Ie49zNLbdhYhI/EWqJrWmeQ0CeopnHz1vaIYDjj5/YuCn8ITRP0e0dt3jgmAoXnVV5is6q
-        v7/ok7X3edgkGHvbxYA2cfp9PAvU0WHRywWmP41loqG6CwpPf+JmQsG5/qf4X/+wKpXv8JvBp2JiJuYA
-        AAAASUVORK5CYII=
-</value>
-  </data>
-  <metadata name="loaiPhongBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>330, 17</value>
-  </metadata>
   <metadata name="dBQuanLyKhachSanDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>127, 17</value>
   </metadata>
-  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="phongBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>188, 138</value>
-  </metadata>
-  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dichVuBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
-  </metadata>
-  <metadata name="hoaDonBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 99</value>
-  </metadata>
-  <metadata name="nhanVienBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>347, 56</value>
-  </metadata>
-  <metadata name="khachHangBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>191, 99</value>
-  </metadata>
-  <metadata name="chamCongBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>890, 49</value>
-  </metadata>
-  <data name="richTextBox1.Text" xml:space="preserve">
-    <value>Chào mừng Quý khách đến với [Tên Khách Sạn]!
-
-**BÁO CÁO KHÁCH SẠN HÀNG THÁNG:**
-
-**Thời gian báo cáo:** [Ngày/Tháng/Năm]
-
----
-
-**1. Tổng quan:**
-- Tổng số lượt khách đến: [Số lượng khách]
-- Tình trạng phòng trống: [Số lượng phòng trống]
-- Tình trạng phòng đã đặt: [Số lượng phòng đã đặt]
-- Tình trạng phòng đang sử dụng: [Số lượng phòng đang sử dụng]
-
-**2. Lượt khách theo loại phòng:**
-- Phòng Đơn: [Số lượng khách]
-- Phòng Đôi: [Số lượng khách]
-- Suite: [Số lượng khách]
-
-**3. Xu hướng sử dụng dịch vụ:**
-- Dịch vụ Buffet: [Số lượng khách sử dụng]
-- Dịch vụ Spa: [Số lượng khách sử dụng]
-- Dịch vụ Đưa đón: [Số lượng khách sử dụng]
-
-**4. Đánh giá từ khách hàng:**
-- Đánh giá Trung bình: [Điểm số trung bình]
-
----
-
-Cảm ơn Quý khách đã lựa chọn [Tên Khách Sạn] là điểm đến của mình. Chúng tôi mong rằng bạn có một trải nghiệm tuyệt vời tại đây. Hãy liên hệ với chúng tôi nếu có bất kỳ yêu cầu hoặc phản hồi nào!
-
-Trân trọng,
-Đội ngũ [Tên Khách Sạn]</value>
-  </data>
   <metadata name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -214,7 +128,7 @@ Trân trọng,
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADk
-        OgAAAk1TRnQBSQFMAgEBCwEAAUgBAQFIAQEBKAEAASgBAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        OgAAAk1TRnQBSQFMAgEBCwEAAWABAQFgAQEBKAEAASgBAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABoAMAAXgDAAEBAQABCAYAAUsYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -468,22 +382,96 @@ Trân trọng,
         AQ8G/wGAA/8BAQf/AYET/wGBFv8L
 </value>
   </data>
-  <metadata name="phongBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>701, 17</value>
+  <metadata name="tableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 138</value>
   </metadata>
   <metadata name="khachHangTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>383, 99</value>
   </metadata>
-  <metadata name="tableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 138</value>
+  <metadata name="dichVuBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
   </metadata>
-  <metadata name="phongTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>361, 138</value>
+  <metadata name="hoaDonBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 99</value>
   </metadata>
   <metadata name="dichVuTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>697, 138</value>
   </metadata>
+  <metadata name="phongBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>188, 138</value>
+  </metadata>
+  <metadata name="phongTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>361, 138</value>
+  </metadata>
+  <metadata name="khachHangBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>191, 99</value>
+  </metadata>
+  <metadata name="nhanVienBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>347, 56</value>
+  </metadata>
+  <metadata name="loaiPhongBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>330, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAA+VJREFUaEPtmUvITVEUx6+8yaMIeSWGGIs8EqKkPPIsDISMzCgGHuU98ZgoMmEk
+        I2LgNWQi8iyKSIqJUgh5/X/n3pX1nbvu951zHK6Lf/26d6/933ute79z9tn7fpUOtFYMqr6t03Cxqvo2
+        1Jbaa6TVYmT1bZ0GijXVt/nVVTwTu5NWvQ6Jx6JL0mqrCeKbmJS02qqzeCQOJq167RHPRbeklVGjxEXx
+        VJD4o7gjDgg+CMXeFZ8E/U/EBTFMLBLXxWtBH6+0idOPDz99jGce5mNe5icP+egnP3VQTybNEW8Fg+Ga
+        GCDQYHFDWN8bMV2gTmK/sD6gTRzhw299zMN8iPnJY33kp45csm8E0tcnl4z18W15jRfWB+OE1z1hfbsI
+        OG0V1sell0v9xUMxXzDxKeF1RmwTiwXXZ09hWinOiRm1V9omfPgZx3jm8SIP+chLfurIrN5ioTgqTotL
+        tVfDtykMor50O6uXvAsEdWRSL3Fe2J+pmfABqadDnRAM4KaYLUb/ZsYI8rLqUMdx0a5Y8L8Irie7TllX
+        o8mj641vJfJG3xbjIy/5EGO4/qlnBIFGWir4dDuSVlVXhf25PB/EWGHqIV6JyPtS0G9inK3Haa4I005B
+        bEnSaqB1AhOvphfivfA3zH2Bb54wDRXE8HsvbeL0mxhHjHm8lzz4TVE9dWpUtJ8IbRf4oqLPJq0fok08
+        Kpp5vNK5fqponmKbHSxN+KKiHwjvpU08Kpp5vJc8pRTNfoBYxERh6iO4ziMfcfpNbKQiH5DPVLhoNjo8
+        wdJMFranMPHIjrzpRznjpojISz5T4aKbqcJFHxFsXtLcEhwETKyvl0Xk5dq19RcxjvGR97AwFS6aG+Oz
+        8BPbfjm6Ed8J76VNPLoRmcd7yVPa6uEnQi2x5PGN+JuFBwG+qGg29t5rB4aoaObxXvKUUjR/NmIRM4WJ
+        k8dXEfmI28kHMS7yAflMhYueJvYGbBSc7bxWiMhL3ItxjI+8U4WpcNHNVOGi1wu/qTHY5/YVXvtE5CXu
+        1U8wPvL63IWL5jcIYhFzhWmIiDwG/SbGRR4gn6lw0dzN7JP9Rp3fKvBFqwf7Ye+lTTxaPZjHe8lT2pLX
+        ckW35OXB++iGOSbSNyJLVuQl7sW4RjciP3qaChfdTBUumoeLP10YG0T64cLBOPIS9+IXUcZHXvKZChf9
+        Kx7js0Tkg1Ie49zNLbdhYhI/EWqJrWmeQ0CeopnHz1vaIYDjj5/YuCn8ITRP0e0dt3jgmAoXnVV5is6q
+        v7/ok7X3edgkGHvbxYA2cfp9PAvU0WHRywWmP41loqG6CwpPf+JmQsG5/qf4X/+wKpXv8JvBp2JiJuYA
+        AAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Chào mừng Quý khách đến với [Tên Khách Sạn]!
+
+**BÁO CÁO KHÁCH SẠN HÀNG THÁNG:**
+
+**Thời gian báo cáo:** [Ngày/Tháng/Năm]
+
+---
+
+**1. Tổng quan:**
+- Tổng số lượt khách đến: [Số lượng khách]
+- Tình trạng phòng trống: [Số lượng phòng trống]
+- Tình trạng phòng đã đặt: [Số lượng phòng đã đặt]
+- Tình trạng phòng đang sử dụng: [Số lượng phòng đang sử dụng]
+
+**2. Lượt khách theo loại phòng:**
+- Phòng Đơn: [Số lượng khách]
+- Phòng Đôi: [Số lượng khách]
+- Suite: [Số lượng khách]
+
+**3. Xu hướng sử dụng dịch vụ:**
+- Dịch vụ Buffet: [Số lượng khách sử dụng]
+- Dịch vụ Spa: [Số lượng khách sử dụng]
+- Dịch vụ Đưa đón: [Số lượng khách sử dụng]
+
+**4. Đánh giá từ khách hàng:**
+- Đánh giá Trung bình: [Điểm số trung bình]
+
+---
+
+Cảm ơn Quý khách đã lựa chọn [Tên Khách Sạn] là điểm đến của mình. Chúng tôi mong rằng bạn có một trải nghiệm tuyệt vời tại đây. Hãy liên hệ với chúng tôi nếu có bất kỳ yêu cầu hoặc phản hồi nào!
+
+Trân trọng,
+Đội ngũ [Tên Khách Sạn]</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>51</value>
+    <value>85</value>
   </metadata>
 </root>

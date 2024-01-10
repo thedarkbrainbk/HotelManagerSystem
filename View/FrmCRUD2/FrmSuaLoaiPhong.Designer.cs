@@ -115,7 +115,7 @@
             this.TxtGiaGioDau.Multiline = true;
             this.TxtGiaGioDau.Name = "TxtGiaGioDau";
             this.TxtGiaGioDau.Size = new System.Drawing.Size(260, 32);
-            this.TxtGiaGioDau.TabIndex = 25;
+            this.TxtGiaGioDau.TabIndex = 2;
             // 
             // TxtSoNguoi
             // 
@@ -125,7 +125,7 @@
             this.TxtSoNguoi.Multiline = true;
             this.TxtSoNguoi.Name = "TxtSoNguoi";
             this.TxtSoNguoi.Size = new System.Drawing.Size(260, 32);
-            this.TxtSoNguoi.TabIndex = 24;
+            this.TxtSoNguoi.TabIndex = 1;
             // 
             // TxtTenLoaiPhong
             // 
@@ -135,7 +135,7 @@
             this.TxtTenLoaiPhong.Multiline = true;
             this.TxtTenLoaiPhong.Name = "TxtTenLoaiPhong";
             this.TxtTenLoaiPhong.Size = new System.Drawing.Size(260, 32);
-            this.TxtTenLoaiPhong.TabIndex = 13;
+            this.TxtTenLoaiPhong.TabIndex = 0;
             // 
             // label1
             // 
@@ -208,7 +208,7 @@
             this.TxtMaLoaiPhong.Name = "TxtMaLoaiPhong";
             this.TxtMaLoaiPhong.ReadOnly = true;
             this.TxtMaLoaiPhong.Size = new System.Drawing.Size(260, 32);
-            this.TxtMaLoaiPhong.TabIndex = 12;
+            this.TxtMaLoaiPhong.TabIndex = 10;
             // 
             // BtnThoat
             // 
@@ -228,7 +228,7 @@
             this.BtnThoat.Name = "BtnThoat";
             this.tableLayoutPanel1.SetRowSpan(this.BtnThoat, 2);
             this.BtnThoat.Size = new System.Drawing.Size(100, 40);
-            this.BtnThoat.TabIndex = 17;
+            this.BtnThoat.TabIndex = 7;
             this.BtnThoat.Text = "Thoát";
             this.BtnThoat.TextColor = System.Drawing.Color.Black;
             this.BtnThoat.UseVisualStyleBackColor = false;
@@ -278,7 +278,7 @@
             this.TxtGiaGioTiepTheo.Multiline = true;
             this.TxtGiaGioTiepTheo.Name = "TxtGiaGioTiepTheo";
             this.TxtGiaGioTiepTheo.Size = new System.Drawing.Size(261, 32);
-            this.TxtGiaGioTiepTheo.TabIndex = 21;
+            this.TxtGiaGioTiepTheo.TabIndex = 3;
             // 
             // TxtGiaQuaDem
             // 
@@ -288,7 +288,7 @@
             this.TxtGiaQuaDem.Multiline = true;
             this.TxtGiaQuaDem.Name = "TxtGiaQuaDem";
             this.TxtGiaQuaDem.Size = new System.Drawing.Size(262, 32);
-            this.TxtGiaQuaDem.TabIndex = 22;
+            this.TxtGiaQuaDem.TabIndex = 4;
             // 
             // TxtGiaTheoNgay
             // 
@@ -298,7 +298,7 @@
             this.TxtGiaTheoNgay.Multiline = true;
             this.TxtGiaTheoNgay.Name = "TxtGiaTheoNgay";
             this.TxtGiaTheoNgay.Size = new System.Drawing.Size(262, 34);
-            this.TxtGiaTheoNgay.TabIndex = 23;
+            this.TxtGiaTheoNgay.TabIndex = 5;
             // 
             // BtnXacNhan
             // 
@@ -318,7 +318,7 @@
             this.BtnXacNhan.Name = "BtnXacNhan";
             this.tableLayoutPanel1.SetRowSpan(this.BtnXacNhan, 2);
             this.BtnXacNhan.Size = new System.Drawing.Size(120, 40);
-            this.BtnXacNhan.TabIndex = 16;
+            this.BtnXacNhan.TabIndex = 6;
             this.BtnXacNhan.Text = "Xác nhận";
             this.BtnXacNhan.TextColor = System.Drawing.Color.Black;
             this.BtnXacNhan.UseVisualStyleBackColor = false;

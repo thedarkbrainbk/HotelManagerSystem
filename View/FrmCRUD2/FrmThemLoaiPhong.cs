@@ -17,6 +17,11 @@ namespace TestGUI1.View.FrmCRUD2
         {
             InitializeComponent();
         }
+        public FrmThemLoaiPhong(string idRamDom)
+        {
+            InitializeComponent();
+            this.TxtMaLoaiPhong.Text = idRamDom;
+        }
 
         private void BtnThoat_Click(object sender, EventArgs e)
         {
@@ -44,6 +49,13 @@ namespace TestGUI1.View.FrmCRUD2
                 string giaGioTiepTheo = TxtGiaGioTiepTheo.Text;
                 string giaQuaDem = TxtGiaQuaDem.Text;
                 string giaTheoNgay = TxtGiaTheoNgay.Text;
+                List <LoaiPhong> lstLoaiPhong = modelQuanLy.GetLoaiPhongList();
+                if (lstLoaiPhong.Any(loaiPhong => loaiPhong.TenLoaiPhong == tenLoaiPhong))
+                {
+                    
+                    MessageBox.Show("Tên loại phòng đã tồn tại!");
+                    return;
+                }
 
                 // Kiểm tra nếu một trong các trường dữ liệu không được nhập
                 if (string.IsNullOrEmpty(idLoaiPhong) || string.IsNullOrEmpty(tenLoaiPhong) || string.IsNullOrEmpty(soNguoi) || string.IsNullOrEmpty(giaGioDau) || string.IsNullOrEmpty(giaGioTiepTheo) || string.IsNullOrEmpty(giaQuaDem) || string.IsNullOrEmpty(giaTheoNgay))

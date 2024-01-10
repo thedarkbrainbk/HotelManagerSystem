@@ -85,11 +85,13 @@
       <DependentUpon>DBQuanLyKhachSanDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="DichVu.cs" />
+    <Compile Include="ModelLamViec.cs" />
     <Compile Include="ModelQuanLy.cs" />
     <Compile Include="HoaDon.cs" />
     <Compile Include="HoaDonDichVu.cs" />
     <Compile Include="KhachHang.cs" />
     <Compile Include="LoaiPhong.cs" />
+    <Compile Include="ModelTaiKhoan.cs" />
     <Compile Include="NhanVien.cs" />
     <Compile Include="Phong.cs" />
     <Compile Include="QuanLy.cs" />
@@ -124,11 +126,23 @@
     <Compile Include="View\FrmCRUD2\FrmSuaNhanVien.Designer.cs">
       <DependentUpon>FrmSuaNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FrmCRUD2\FrmSuaThongTinKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmCRUD2\FrmSuaThongTinKhachHang.Designer.cs">
+      <DependentUpon>FrmSuaThongTinKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FrmCRUD2\FrmThemDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\FrmCRUD2\FrmThemDichVu.Designer.cs">
       <DependentUpon>FrmThemDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmCRUD2\FrmNhapThongTinKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmCRUD2\FrmNhapThongTinKhachHang.Designer.cs">
+      <DependentUpon>FrmNhapThongTinKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FrmCRUD2\FrmThemLoaiPhong.cs">
       <SubType>Form</SubType>
@@ -213,8 +227,14 @@
     <EmbeddedResource Include="View\FrmCRUD2\FrmSuaNhanVien.resx">
       <DependentUpon>FrmSuaNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmCRUD2\FrmSuaThongTinKhachHang.resx">
+      <DependentUpon>FrmSuaThongTinKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FrmCRUD2\FrmThemDichVu.resx">
       <DependentUpon>FrmThemDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmCRUD2\FrmNhapThongTinKhachHang.resx">
+      <DependentUpon>FrmNhapThongTinKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FrmCRUD2\FrmThemLoaiPhong.resx">
       <DependentUpon>FrmThemLoaiPhong.cs</DependentUpon>

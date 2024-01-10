@@ -17,6 +17,11 @@ namespace TestGUI1.View.FrmCRUD2
         {
             InitializeComponent();
         }
+        public FrmSuaLoaiPhong(string idRanDom)
+        {
+            InitializeComponent();
+            TxtMaLoaiPhong.Text = idRanDom;
+        }
         public FrmSuaLoaiPhong(string idLoaiPhong, string tenLoaiPhong, string soNguoi, string giaGioDau, string giaGioTiepTheo, string giaQuaDem, string giaTheoNgay)
         {
             InitializeComponent();

@@ -14,7 +14,7 @@ namespace TestGUI1.View
 {
     public partial class FrmQuanLy : Form
     {
-        ModelQuanLy frmQuanLyClass = new ModelQuanLy();
+        ModelQuanLy modelQuanLy = new ModelQuanLy();
         public FrmQuanLy()
         {
             InitializeComponent();
@@ -23,18 +23,19 @@ namespace TestGUI1.View
         {
             GetTableLoaiPhong();
             GetTableDichVu();
-            //GetTableNhanVien();
-            // TODO: This line of code loads data into the 'dBQuanLyKhachSanDataSet.Phong' table. You can move, or remove it, as needed.
-            this.phongTableAdapter.Fill(this.dBQuanLyKhachSanDataSet.Phong);
-            // TODO: This line of code loads data into the 'dBQuanLyKhachSanDataSet.DatPhong' table. You can move, or remove it, as needed.
-            //this.lichDatPhongTableAdapter.Fill(this.dBQuanLyKhachSanDataSet.LichDatPhong);
-            // TODO: This line of code loads data into the 'dBQuanLyKhachSanDataSet.KhachHang' table. You can move, or remove it, as needed.
-            this.khachHangTableAdapter.Fill(this.dBQuanLyKhachSanDataSet.KhachHang);
+            GetTableNhanVien();
+            GetTablePhong();
+            GetTableKhachHang();
         }
         #region Tạo các bảng
         private void GetTableDichVu()
         {
-            DgvDichVu.DataSource = frmQuanLyClass.GetDichVu();
+            DgvDichVu.DataSource = modelQuanLy.GetDichVu();
+            DgvDichVu.Columns["IdDichVu"].HeaderText = "Mã dịch vụ";
+            DgvDichVu.Columns["TenDichVu"].HeaderText = "Tên dịch vụ";
+            DgvDichVu.Columns["LoaiDichVu"].HeaderText = "Loại dịch vụ";
+            DgvDichVu.Columns["DonViTinh"].HeaderText = "Dơn vị tính";
+            DgvDichVu.Columns["DonGia"].HeaderText = "Đơn giá";
             TxtMaDichVu.Text = "";
             TxtTenDichVu.Text = "";
             TxtLoaiDichVu.Text = "";
@@ -44,7 +45,15 @@ namespace TestGUI1.View
         }
         private void GetTableLoaiPhong()
         {
-            DgvLoaiPhong.DataSource = frmQuanLyClass.GetLoaiPhong();
+            DgvLoaiPhong.DataSource = modelQuanLy.GetLoaiPhong();
+            DgvLoaiPhong.Columns["IdLoaiPhong"].HeaderText = "Mã loại phòng";
+            DgvLoaiPhong.Columns["TenLoaiPhong"].HeaderText = "Tên loại phòng";
+            DgvLoaiPhong.Columns["SoNguoi"].HeaderText = "Số người";
+            DgvLoaiPhong.Columns["GiaGioDau"].HeaderText = "Giá giờ đầu";
+            DgvLoaiPhong.Columns["GiaGioTiepTheo"].HeaderText = "Giá giờ tiếp theo";
+            DgvLoaiPhong.Columns["GiaQuaDem"].HeaderText = "Giá qua đêm";
+            DgvLoaiPhong.Columns["GiaTheoNgay"].HeaderText = "Giá theo ngày";
+
             TxtMaLoaiPhong.Text = "";
             TxtTenLoaiPhong.Text = "";
             TxtSoNguoi.Text = "";
@@ -53,51 +62,74 @@ namespace TestGUI1.View
             TxtGiaQuaDem.Text = "";
             TxtGiaTheoNgay.Text = "";
         }
-        private void GetTableNhanVien()
-        {
-            DgvNhanVien.DataSource = frmQuanLyClass.GetNhanVien();
-            TxtMaNhanVien.Text = "";
-            TxtTenNhanVien.Text = "";
-            DtpNgaySinh.Value = DateTime.Now; // Adjust to your actual DateTimePicker control name
-            CboGioiTinh.SelectedIndex = -1; // Reset the selected index or set it to a default value
-            TxtDiaChi.Text = "";
-            TxtSoDienThoai.Text = "";
-            TxtCCCD.Text = "";
-            TxtBoPhan.Text = "";
-        }
-        #endregion
         private void GetTablePhong()
         {
-            DgvPhong.DataSource = frmQuanLyClass.GetPhong();
+            DgvPhong.DataSource = modelQuanLy.GetPhong();
+            DgvPhong.Columns["IdPhong"].HeaderText = "Mã phòng";
+            DgvPhong.Columns["TenPhong"].HeaderText = "Tên phòng";
+            DgvPhong.Columns["TenLoaiPhong"].HeaderText = "Loại phòng";
+            DgvPhong.Columns["TinhTrangPhong"].HeaderText = "Tình trạng phòng";
+            DgvPhong.Columns["IsVip"].HeaderText = "Phòng vip";
             TxtMaPhong.Text = "";
             TxtTenPhong.Text = "";
-            CboLoaiPhong.Text = ""; 
+            CboLoaiPhong.Text = "";
             CboTinhTrangPhong.Text = "";
             CkbPhongVip.Checked = false;
         }
         private void GetTableKhachHang()
         {
-            DgvKhachHang.DataSource = frmQuanLyClass.GetKhachHang();
+            DgvKhachHang.DataSource = modelQuanLy.GetKhachHang();
+            DgvKhachHang.Columns["IdKhachHang"].HeaderText = "Mã khách hàng";
+            DgvKhachHang.Columns["TenKhachHang"].HeaderText = "Tên khách hàng";
+            DgvKhachHang.Columns["NgaySinh"].HeaderText = "Ngày sinh";
+            DgvKhachHang.Columns["CCCD"].HeaderText = "CCCD";
+            DgvKhachHang.Columns["DiaChi"].HeaderText = "Địa chỉ";
+            DgvKhachHang.Columns["SoDienThoai"].HeaderText = "Số điện thoại";
+
             TxtMaKhachHang.Text = "";
             TxtTenKhachHang.Text = "";
             DtpNgaySinhKH.Value = DateTime.Now;
             TxtCCCDKH.Text = "";
             TxtDiaChiKH.Text = "";
             TxtSoDienThoaiKH.Text = "";
-
         }
+
+        private void GetTableNhanVien()
+        {
+            DgvNhanVien.DataSource = modelQuanLy.GetNhanVien();
+            DgvNhanVien.Columns["IdNhanVien"].HeaderText = "Mã nhân viên";
+            DgvNhanVien.Columns["TenNhanVien"].HeaderText = "Tên nhân viên";
+            DgvNhanVien.Columns["NgaySinh"].HeaderText = "Ngày sinh";
+            DgvNhanVien.Columns["GioiTinh"].HeaderText = "Giới tính";
+            DgvNhanVien.Columns["DiaChi"].HeaderText = "Địa chỉ";
+            DgvNhanVien.Columns["SoDienThoai"].HeaderText = "Số điện thoại";
+            DgvNhanVien.Columns["CCCD"].HeaderText = "CCCD";
+            DgvNhanVien.Columns["BoPhan"].HeaderText = "Bộ phận";
+
+            TxtMaNhanVien.Text = "";
+            TxtTenNhanVien.Text = "";
+            DtpNgaySinh.Value = DateTime.Now; // Điều chỉnh theo tên thực tế của control DateTimePicker
+            CboGioiTinh.SelectedIndex = -1; // Đặt lại index hoặc giá trị mặc định cho ComboBox
+            TxtDiaChi.Text = "";
+            TxtSoDienThoai.Text = "";
+            TxtCCCD.Text = "";
+            TxtBoPhan.Text = "";
+        }
+
+        #endregion
+
 
 
         private void rjButton38_Click(object sender, EventArgs e)
         {
             FrmManHinhLamViec frmManHinhLamViec = new FrmManHinhLamViec();
             frmManHinhLamViec.ShowDialog();
-            this.Hide();
         }
         #region Thêm sửa xoá loại phòng
         private void BtnThemLoaiPhong_Click(object sender, EventArgs e)
         {
-            FrmThemLoaiPhong frmThemLoaiPhong = new FrmThemLoaiPhong();
+            string idRanDom = SPClass.TaoId();
+            FrmThemLoaiPhong frmThemLoaiPhong = new FrmThemLoaiPhong(idRanDom);
             frmThemLoaiPhong.ShowDialog();
             GetTableLoaiPhong();
         }
@@ -144,7 +176,7 @@ namespace TestGUI1.View
                 if (result == DialogResult.Yes)
                 {
                     // Thực hiện xoá loại phòng
-                    bool XoaLoaiPhong = frmQuanLyClass.XoaLoaiPhong(idLoaiPhong);
+                    bool XoaLoaiPhong = modelQuanLy.XoaLoaiPhong(idLoaiPhong);
 
                     if (XoaLoaiPhong)
                     {
@@ -170,8 +202,21 @@ namespace TestGUI1.View
         #region Thêm sửa xoá phòng
         private void BtnThemPhong_Click(object sender, EventArgs e)
         {
-            FrmThemPhong frmThemPhong = new FrmThemPhong();
-            frmThemPhong.ShowDialog();
+            //Kiểm tra xem đã thêm loại phòng chưa
+            // Gọi hàm GetTenLoaiPhongList từ form của bạn và đặt kết quả vào ComboBox CboLoaiPhong
+            List<LoaiPhong> lstLoaiPhong = modelQuanLy.GetLoaiPhongList();
+            if (lstLoaiPhong.Count == 0)
+            {
+                    MessageBox.Show("Vui lòng thêm loại phòng trước khi thêm phòng mới!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+            }
+            else
+            {
+                FrmThemPhong frmThemPhong = new FrmThemPhong(lstLoaiPhong);
+                frmThemPhong.ShowDialog();
+                GetTablePhong();
+            }
+            
         }
         private void BtnSuaPhong_Click(object sender, EventArgs e)
         {
@@ -184,9 +229,9 @@ namespace TestGUI1.View
                 string idLoaiPhong = DgvPhong.CurrentRow.Cells[2].Value.ToString();
                 string tinhTrangPhong = DgvPhong.CurrentRow.Cells[3].Value.ToString();
                 bool isVip = Convert.ToBoolean(DgvPhong.CurrentRow.Cells[4].Value);
-
+                List<LoaiPhong> lstLoaiPhong = modelQuanLy.GetLoaiPhongList();
                 // Tạo đối tượng FrmSuaPhong và truyền dữ liệu qua constructor
-                FrmSuaPhong frmSuaPhong = new FrmSuaPhong(maPhong, tenPhong, idLoaiPhong, tinhTrangPhong, isVip);
+                FrmSuaPhong frmSuaPhong = new FrmSuaPhong(maPhong, tenPhong, idLoaiPhong, tinhTrangPhong, isVip, lstLoaiPhong);
 
                 // Hiển thị form sửa phòng
                 frmSuaPhong.ShowDialog();
@@ -214,7 +259,7 @@ namespace TestGUI1.View
                     string maPhong = DgvPhong.CurrentRow.Cells[0].Value.ToString();
 
                     // Gọi hàm xoá phòng từ lớp quản lý
-                    bool xoaPhong = frmQuanLyClass.XoaPhong(maPhong);
+                    bool xoaPhong = modelQuanLy.XoaPhong(maPhong);
 
                     // Kiểm tra kết quả xoá và cập nhật lại bảng phòng
                     if (xoaPhong)
@@ -283,7 +328,7 @@ namespace TestGUI1.View
                     string idDichVu = DgvDichVu.CurrentRow.Cells[0].Value.ToString();
 
                     // Thực hiện xóa dịch vụ
-                    bool XoaDichVu = frmQuanLyClass.XoaDichVu(idDichVu);
+                    bool XoaDichVu = modelQuanLy.XoaDichVu(idDichVu);
 
                     // Kiểm tra kết quả xóa
                     if (XoaDichVu)
@@ -306,22 +351,81 @@ namespace TestGUI1.View
         #endregion
 
         #region Thêm xoá sửa nhân viên
+        // Thêm nhân viên
         private void BtnThemNhanVien_Click(object sender, EventArgs e)
         {
             FrmThemNhanVien frmThemNhanVien = new FrmThemNhanVien();
             frmThemNhanVien.ShowDialog();
-            GetTableDichVu();
+            GetTableNhanVien();
         }
+
+        // Sửa nhân viên
         private void BtnSuaNhanVien_Click(object sender, EventArgs e)
         {
-            FrmSuaNhanVien frmSuaNhanVien = new FrmSuaNhanVien();
-            frmSuaNhanVien.ShowDialog();
+            // Kiểm tra xem đã chọn nhân viên trong bảng chưa
+            if (TxtMaNhanVien.Text != "")
+            {
+                // Lấy dữ liệu từ các ô trong bảng
+                string idNhanVien = DgvNhanVien.CurrentRow.Cells[0].Value.ToString();
+                string tenNhanVien = DgvNhanVien.CurrentRow.Cells[1].Value.ToString();
+                DateTime ngaySinh = Convert.ToDateTime(DgvNhanVien.CurrentRow.Cells[2].Value);
+                string gioiTinh = DgvNhanVien.CurrentRow.Cells[3].Value.ToString();
+                string diaChi = DgvNhanVien.CurrentRow.Cells[4].Value.ToString();
+                string soDienThoai = DgvNhanVien.CurrentRow.Cells[5].Value.ToString();
+                string cccd = DgvNhanVien.CurrentRow.Cells[6].Value.ToString();
+                string boPhan = DgvNhanVien.CurrentRow.Cells[7].Value.ToString();
 
+                // Tạo đối tượng FrmSuaNhanVien và truyền dữ liệu qua constructor
+                FrmSuaNhanVien frmSuaNhanVien = new FrmSuaNhanVien(idNhanVien, tenNhanVien, ngaySinh, gioiTinh, diaChi, soDienThoai, cccd, boPhan);
+
+                // Hiển thị form sửa nhân viên
+                frmSuaNhanVien.ShowDialog();
+
+                // Sau khi sửa xong, cập nhật lại bảng nhân viên
+                GetTableNhanVien();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn nhân viên cần sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
+
+        // Xoá nhân viên
         private void BtnXoaNhanVien_Click(object sender, EventArgs e)
         {
+            // Kiểm tra xem đã chọn nhân viên trong bảng chưa
+            if (TxtMaNhanVien.Text != "")
+            {
+                // Lấy ID của nhân viên cần xóa
+                string idNhanVien = TxtMaNhanVien.Text;
 
+                // Hiển thị hộp thoại xác nhận xoá
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xoá nhân viên này?", "Xác nhận xoá", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    // Thực hiện xoá nhân viên
+                    bool XoaNhanVien = modelQuanLy.XoaNhanVien(idNhanVien);
+
+                    if (XoaNhanVien)
+                    {
+                        MessageBox.Show("Xoá nhân viên thành công!");
+
+                        // Sau khi xoá xong, cập nhật lại bảng nhân viên
+                        GetTableNhanVien();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xoá nhân viên thất bại. Kiểm tra lại dữ liệu!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn nhân viên cần xoá!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
+
         #endregion
 
         #region Thêm xoá sửa xoá khách hàng
@@ -372,13 +476,21 @@ namespace TestGUI1.View
 
         private void DgvPhong_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Điền thông tin từ DataGridView vào các TextBox
-            TxtMaPhong.ReadOnly = true;
-            TxtMaPhong.Text = DgvPhong.CurrentRow.Cells[0].Value.ToString();
-            TxtTenPhong.Text = DgvPhong.CurrentRow.Cells[1].Value.ToString();
-            CboLoaiPhong.Text = DgvPhong.CurrentRow.Cells[2].Value.ToString();
-            CboTinhTrangPhong.Text = DgvPhong.CurrentRow.Cells[3].Value.ToString();
-            CkbPhongVip.Checked = Convert.ToBoolean(DgvPhong.CurrentRow.Cells[4].Value);
+            try
+            {
+                // Điền thông tin từ DataGridView vào các TextBox
+                TxtMaPhong.ReadOnly = true;
+                TxtMaPhong.Text = DgvPhong.CurrentRow.Cells[0].Value.ToString();
+                TxtTenPhong.Text = DgvPhong.CurrentRow.Cells[1].Value.ToString();
+                CboLoaiPhong.Text = DgvPhong.CurrentRow.Cells[2].Value.ToString();
+                CboTinhTrangPhong.Text = DgvPhong.CurrentRow.Cells[3].Value.ToString();
+                CkbPhongVip.Checked = Convert.ToBoolean(DgvPhong.CurrentRow.Cells[4].Value);
+            }
+            catch
+            {
+
+            }
+           
         }
         #endregion
         private void BtnDangXuat_Click(object sender, EventArgs e)
@@ -397,6 +509,25 @@ namespace TestGUI1.View
 
         private void BtnTimNhanVien_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void BtnTaiKhoan_Click(object sender, EventArgs e)
+        {
+            FrmTaiKhoan frmTaiKhoan = new FrmTaiKhoan();
+            frmTaiKhoan.ShowDialog();
+        }
+
+        private void DgvHoaDon_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            HoaDon hoaDon = new HoaDon();
+            hoaDon.IdHoaDon = DgvHoaDon.CurrentRow.Cells[0].Value.ToString();
+            hoaDon.IdKhachHang = DgvHoaDon.CurrentRow.Cells[1].Value.ToString();
+            hoaDon.IdNhanVien = DgvHoaDon.CurrentRow.Cells[2].Value.ToString();
+            hoaDon.IdPhong = DgvHoaDon.CurrentRow.Cells[3].Value.ToString();
+//
+            hoaDon.LoaiNghi = DgvHoaDon.CurrentRow.Cells[7].Value.ToString();
+
 
         }
     }

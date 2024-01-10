@@ -66,3 +66,5 @@ C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSy
 C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\obj\Debug\QuanLyKhachSan.csproj.CopyComplete
 C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\obj\Debug\TestGUI1.View.FrmCRUD2.FrmSuaNhanVien.resources
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\obj\Debug\TestGUI1.View.FrmCRUD2.FrmSuaThongTinKhachHang.resources
+C:\Users\Nguyen Khac Anh Tuan\Desktop\RemotePhanMemQuanLyKhachSan\HotelManagerSystem\obj\Debug\TestGUI1.View.FrmCRUD2.FrmNhapThongTinKhachHang.resources
