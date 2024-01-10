@@ -38,7 +38,7 @@ namespace TestGUI1.View.FrmCRUD2
 
         private void BtnXacNhan_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Chức năng đang trong quá trình phát triển!");
         }
     }
 }

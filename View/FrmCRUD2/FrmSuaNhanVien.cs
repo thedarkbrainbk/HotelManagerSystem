@@ -30,5 +30,10 @@ namespace TestGUI1.View.FrmCRUD2
             }
             // Nếu người dùng chọn "No", không làm gì cả
         }
+
+        private void BtnXacNhan_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chức năng đang trong quá trình phát triển!");
+        }
     }
 }

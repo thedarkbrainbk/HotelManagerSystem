@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TestGUI1.View.FrmChinh;
 using TestGUI1.View.FrmCRUD2;
 
 namespace TestGUI1.View
@@ -21,6 +22,12 @@ namespace TestGUI1.View
         }
         private void FrmQuanLy_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dBQuanLyKhachSanDataSet1.Phong' table. You can move, or remove it, as needed.
+            this.phongTableAdapter.Fill(this.dBQuanLyKhachSanDataSet1.Phong);
+            // TODO: This line of code loads data into the 'dBQuanLyKhachSanDataSet.DichVuKhac' table. You can move, or remove it, as needed.
+            this.dichVuKhacTableAdapter.Fill(this.dBQuanLyKhachSanDataSet.DichVuKhac);
+            // TODO: This line of code loads data into the 'dBQuanLyKhachSanDataSet.HoaDonDichVu' table. You can move, or remove it, as needed.
+            this.hoaDonDichVuTableAdapter.Fill(this.dBQuanLyKhachSanDataSet.HoaDonDichVu);
             GetTableLoaiPhong();
             GetTableDichVu();
             //GetTableNhanVien();
@@ -92,7 +99,6 @@ namespace TestGUI1.View
         {
             FrmManHinhLamViec frmManHinhLamViec = new FrmManHinhLamViec();
             frmManHinhLamViec.ShowDialog();
-            this.Hide();
         }
         #region Thêm sửa xoá loại phòng
         private void BtnThemLoaiPhong_Click(object sender, EventArgs e)
@@ -347,7 +353,7 @@ namespace TestGUI1.View
 
         private void BtnTimPhong_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Chức năng đang trong quá trình phát triển!");
         }
 
         private void DgvLoaiPhong_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -397,7 +403,131 @@ namespace TestGUI1.View
 
         private void BtnTimNhanVien_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Chức năng đang trong quá trình phát triển!");
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormCRUDHoaDonDichVuKhac formCRUDHoaDonDichVuKhac = new FormCRUDHoaDonDichVuKhac();
+            formCRUDHoaDonDichVuKhac.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormCRUDDichVuKhac formCRUDDichVuKhac = new FormCRUDDichVuKhac();
+            formCRUDDichVuKhac.Show();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnTaiKhoan_Click(object sender, EventArgs e)
+        {
+            FrmTaiKhoan frmTaiKhoan = new FrmTaiKhoan();
+            frmTaiKhoan.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FrmBaoCaoThongKeDichVu frmBaoCaoThongKeDichVu = new FrmBaoCaoThongKeDichVu();
+            frmBaoCaoThongKeDichVu.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FrmBaoCaoThongKeLoaiPhong frmBaoCaoThongKeLoaiPhong = new FrmBaoCaoThongKeLoaiPhong();
+            frmBaoCaoThongKeLoaiPhong.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FrmBaoCaoThongKeKhachHang frm = new FrmBaoCaoThongKeKhachHang();
+            frm.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            FrmBaoCaoThongKeDichVuKhac frm = new FrmBaoCaoThongKeDichVuKhac();
+            frm.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            FrmBaoCaoThongKeChamCong frm = new FrmBaoCaoThongKeChamCong();
+            frm.Show();
+        }
+
+        private void BtnTimHoaDon_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chức năng đang trong quá trình phát triển!");
+        }
+
+        private void BtnLamMoiHoaDon_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chức năng đang trong quá trình phát triển!");
+        }
+
+        private void BtnXoaHoaDon_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chức năng đang trong quá trình phát triển!");
+        }
+
+        private void BtnChiTietHoaDon_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chức năng đang trong quá trình phát triển!");
+        }
+
+        private void BtnXoaToanBo_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chức năng đang trong quá trình phát triển!");
+        }
+
+        private void rjButton5_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chức năng đang trong quá trình phát triển!");
+        }
+
+        private void rjButton3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chức năng đang trong quá trình phát triển!");
+        }
+
+        private void BtnXoaKhachHang_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chức năng đang trong quá trình phát triển!");
+        }
+
+        private void BtnTimKhachHang_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chức năng đang trong quá trình phát triển!");
+        }
+
+        private void BtnCheckIn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chức năng đang trong quá trình phát triển!");
+        }
+
+        private void BtnCheckOut_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chức năng đang trong quá trình phát triển!");
+        }
+
+        private void rjButton19_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chức năng đang trong quá trình phát triển!");
+        }
+
+        private void rjButton21_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chức năng đang trong quá trình phát triển!");
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            FrmBaoCaoThongKeChamCong frmBaoCaoThongKeChamCong = new FrmBaoCaoThongKeChamCong();
+            frmBaoCaoThongKeChamCong.Show();
         }
     }
 }

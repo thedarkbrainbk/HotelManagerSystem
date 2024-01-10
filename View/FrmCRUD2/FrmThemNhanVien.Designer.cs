@@ -317,7 +317,7 @@
             this.CboGioiTinh.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.CboGioiTinh.Location = new System.Drawing.Point(375, 200);
+            this.CboGioiTinh.Location = new System.Drawing.Point(375, 204);
             this.CboGioiTinh.Name = "CboGioiTinh";
             this.CboGioiTinh.Size = new System.Drawing.Size(262, 29);
             this.CboGioiTinh.TabIndex = 27;

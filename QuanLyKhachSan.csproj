@@ -64,6 +64,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -84,6 +85,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBQuanLyKhachSanDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DBQuanLyKhachSanDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBQuanLyKhachSanDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DichVu.cs" />
     <Compile Include="ModelQuanLy.cs" />
     <Compile Include="HoaDon.cs" />
@@ -94,6 +100,48 @@
     <Compile Include="Phong.cs" />
     <Compile Include="QuanLy.cs" />
     <Compile Include="SPClass.cs" />
+    <Compile Include="View\FrmChinh\FrmBaoCaoThongKeDichVuKhac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmChinh\FrmBaoCaoThongKeDichVuKhac.Designer.cs">
+      <DependentUpon>FrmBaoCaoThongKeDichVuKhac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmChinh\FrmBaoCaoThongKeKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmChinh\FrmBaoCaoThongKeKhachHang.Designer.cs">
+      <DependentUpon>FrmBaoCaoThongKeKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmChinh\FrmBaoCaoThongKeChamCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmChinh\FrmBaoCaoThongKeChamCong.Designer.cs">
+      <DependentUpon>FrmBaoCaoThongKeChamCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmCRUD2\FormCRUDDichVuKhac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmCRUD2\FormCRUDDichVuKhac.Designer.cs">
+      <DependentUpon>FormCRUDDichVuKhac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmCRUD2\FormCRUDHoaDonDichVuKhac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmCRUD2\FormCRUDHoaDonDichVuKhac.Designer.cs">
+      <DependentUpon>FormCRUDHoaDonDichVuKhac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmChinh\FrmBaoCaoThongKeDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmChinh\FrmBaoCaoThongKeDichVu.Designer.cs">
+      <DependentUpon>FrmBaoCaoThongKeDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmChinh\FrmBaoCaoThongKeLoaiPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmChinh\FrmBaoCaoThongKeLoaiPhong.Designer.cs">
+      <DependentUpon>FrmBaoCaoThongKeLoaiPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FrmCRUD2\FrmSuaDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +246,27 @@
     <Compile Include="View\FrmChinh\FrmTaiKhoan.Designer.cs">
       <DependentUpon>FrmTaiKhoan.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\FrmChinh\FrmBaoCaoThongKeDichVuKhac.resx">
+      <DependentUpon>FrmBaoCaoThongKeDichVuKhac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmChinh\FrmBaoCaoThongKeKhachHang.resx">
+      <DependentUpon>FrmBaoCaoThongKeKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmChinh\FrmBaoCaoThongKeChamCong.resx">
+      <DependentUpon>FrmBaoCaoThongKeChamCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmCRUD2\FormCRUDDichVuKhac.resx">
+      <DependentUpon>FormCRUDDichVuKhac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmCRUD2\FormCRUDHoaDonDichVuKhac.resx">
+      <DependentUpon>FormCRUDHoaDonDichVuKhac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmChinh\FrmBaoCaoThongKeDichVu.resx">
+      <DependentUpon>FrmBaoCaoThongKeDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmChinh\FrmBaoCaoThongKeLoaiPhong.resx">
+      <DependentUpon>FrmBaoCaoThongKeLoaiPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FrmCRUD2\FrmSuaDichVu.resx">
       <DependentUpon>FrmSuaDichVu.cs</DependentUpon>
     </EmbeddedResource>
@@ -268,6 +337,17 @@
     </None>
     <None Include="DBQuanLyKhachSanDataSet.xss">
       <DependentUpon>DBQuanLyKhachSanDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DBQuanLyKhachSanDataSet1.xsc">
+      <DependentUpon>DBQuanLyKhachSanDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DBQuanLyKhachSanDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBQuanLyKhachSanDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBQuanLyKhachSanDataSet1.xss">
+      <DependentUpon>DBQuanLyKhachSanDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

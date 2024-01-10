@@ -21,5 +21,15 @@ namespace TestGUI1.View
         {
 
         }
+
+        private void rjButton5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void rjButton4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chức năng đang trong quá trình phát triển!");
+        }
     }
 }

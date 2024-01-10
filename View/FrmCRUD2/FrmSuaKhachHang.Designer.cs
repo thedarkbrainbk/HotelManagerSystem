@@ -33,17 +33,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.TxtMaKhachHang = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.TxtSoDienThoai = new System.Windows.Forms.TextBox();
             this.TxtDiaChi = new System.Windows.Forms.TextBox();
-            this.TxtCCCD = new System.Windows.Forms.TextBox();
             this.BtnThoat = new RJCodeAdvance.RJControls.RJButton();
-            this.BtnXacNhan = new RJCodeAdvance.RJControls.RJButton();
             this.DtpNgaySinh = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
+            this.BtnXacNhan = new RJCodeAdvance.RJControls.RJButton();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.TxtCCCD = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -151,6 +151,18 @@
             this.label3.Text = "Họ tên khách hàng";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label4.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.label4, 6);
+            this.label4.Location = new System.Drawing.Point(91, 187);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 21);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Ngày sinh";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // TxtMaKhachHang
             // 
             this.TxtMaKhachHang.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -161,42 +173,6 @@
             this.TxtMaKhachHang.ReadOnly = true;
             this.TxtMaKhachHang.Size = new System.Drawing.Size(260, 29);
             this.TxtMaKhachHang.TabIndex = 12;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label7.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.label7, 6);
-            this.label7.Location = new System.Drawing.Point(91, 319);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 21);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "Địa chỉ";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label8.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.label8, 6);
-            this.label8.Location = new System.Drawing.Point(91, 275);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(101, 21);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Số điện thoại";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label6.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.label6, 6);
-            this.label6.Location = new System.Drawing.Point(91, 231);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 21);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "CCCD";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // TxtSoDienThoai
             // 
@@ -217,16 +193,6 @@
             this.TxtDiaChi.Name = "TxtDiaChi";
             this.TxtDiaChi.Size = new System.Drawing.Size(262, 29);
             this.TxtDiaChi.TabIndex = 22;
-            // 
-            // TxtCCCD
-            // 
-            this.TxtCCCD.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tableLayoutPanel1.SetColumnSpan(this.TxtCCCD, 7);
-            this.TxtCCCD.Location = new System.Drawing.Point(375, 227);
-            this.TxtCCCD.Multiline = true;
-            this.TxtCCCD.Name = "TxtCCCD";
-            this.TxtCCCD.Size = new System.Drawing.Size(262, 29);
-            this.TxtCCCD.TabIndex = 23;
             // 
             // BtnThoat
             // 
@@ -252,6 +218,16 @@
             this.BtnThoat.UseVisualStyleBackColor = false;
             this.BtnThoat.Click += new System.EventHandler(this.BtnThoat_Click);
             // 
+            // DtpNgaySinh
+            // 
+            this.DtpNgaySinh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanel1.SetColumnSpan(this.DtpNgaySinh, 7);
+            this.DtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DtpNgaySinh.Location = new System.Drawing.Point(373, 183);
+            this.DtpNgaySinh.Name = "DtpNgaySinh";
+            this.DtpNgaySinh.Size = new System.Drawing.Size(265, 29);
+            this.DtpNgaySinh.TabIndex = 28;
+            // 
             // BtnXacNhan
             // 
             this.BtnXacNhan.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -274,28 +250,53 @@
             this.BtnXacNhan.Text = "Xác nhận";
             this.BtnXacNhan.TextColor = System.Drawing.Color.Black;
             this.BtnXacNhan.UseVisualStyleBackColor = false;
+            this.BtnXacNhan.Click += new System.EventHandler(this.BtnXacNhan_Click);
             // 
-            // DtpNgaySinh
+            // label8
             // 
-            this.DtpNgaySinh.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tableLayoutPanel1.SetColumnSpan(this.DtpNgaySinh, 7);
-            this.DtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpNgaySinh.Location = new System.Drawing.Point(373, 183);
-            this.DtpNgaySinh.Name = "DtpNgaySinh";
-            this.DtpNgaySinh.Size = new System.Drawing.Size(265, 29);
-            this.DtpNgaySinh.TabIndex = 28;
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label8.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.label8, 6);
+            this.label8.Location = new System.Drawing.Point(91, 275);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(101, 21);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Số điện thoại";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label4
+            // label7
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label4.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.label4, 6);
-            this.label4.Location = new System.Drawing.Point(91, 187);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 21);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Ngày sinh";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label7.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.label7, 6);
+            this.label7.Location = new System.Drawing.Point(91, 319);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(57, 21);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Địa chỉ";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label6.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.label6, 6);
+            this.label6.Location = new System.Drawing.Point(91, 231);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(51, 21);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "CCCD";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // TxtCCCD
+            // 
+            this.TxtCCCD.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanel1.SetColumnSpan(this.TxtCCCD, 7);
+            this.TxtCCCD.Location = new System.Drawing.Point(375, 227);
+            this.TxtCCCD.Multiline = true;
+            this.TxtCCCD.Name = "TxtCCCD";
+            this.TxtCCCD.Size = new System.Drawing.Size(262, 29);
+            this.TxtCCCD.TabIndex = 23;
             // 
             // FrmSuaKhachHang
             // 

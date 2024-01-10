@@ -21,5 +21,37 @@ namespace TestGUI1.View
         {
             // TODO: This line of code loads data into the 'dBQuanLyKhachSanDataSet.HoaDonDichVu' table. You can move, or remove it, as needed.
         }
+
+        private void rjButton5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            FrmGoiDichVu frmGoiDichVu = new FrmGoiDichVu();
+            frmGoiDichVu.ShowDialog();
+
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chức năng đang trong quá trình phát triển!");
+        }
+
+        private void rjButton3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chức năng đang trong quá trình phát triển!");
+        }
+
+        private void rjButton4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chức năng đang trong quá trình phát triển!");
+        }
+
+        private void rjButton6_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chức năng đang trong quá trình phát triển!");
+        }
     }
 }
